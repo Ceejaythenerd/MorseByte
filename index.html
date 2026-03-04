@@ -168,67 +168,161 @@
         .animate-scroll:hover {
             animation-play-state: paused;
         }
+
+        /* Enterprise Preloader */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background-color: #0F172A;
+            /* brand-forest */
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .loader-logo {
+            width: 80px;
+            height: auto;
+            opacity: 0;
+            filter: invert(1) brightness(2);
+        }
+
+        .loader-line-container {
+            width: 200px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .loader-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            background-color: #4169E1;
+            /* brand-sage */
+        }
     </style>
 </head>
 
 <body class="antialiased">
+
+    <!-- Enterprise Preloader -->
+    <div id="preloader">
+        <img src="logo.png" alt="MorseByte Loader" class="loader-logo">
+        <div class="loader-line-container">
+            <div class="loader-line"></div>
+        </div>
+    </div>
 
     <!-- Paper Texture Overlay -->
     <div class="texture-overlay"></div>
 
     <!-- Navigation -->
     <header
-        class="fixed w-full top-0 z-50 transition-all duration-700 bg-brand-bg/80 backdrop-blur-sm border-b border-brand-stone/0"
+        class="fixed w-full top-0 z-50 transition-all duration-700 bg-white/95 backdrop-blur-md border-b border-brand-stone/40"
         id="navbar">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <!-- Logo area -->
-            <a href="#" class="flex items-center space-x-3 cursor-pointer group focus-ring rounded-sm">
-                <img src="logo.png" alt="MorseByte"
-                    class="h-10 object-contain mix-blend-multiply opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="index.html"
+                class="flex items-center space-x-3 cursor-pointer group focus-ring rounded-sm flex-shrink-0">
+                <div class="relative">
+                    <img src="logo.png" alt="MorseByte"
+                        class="h-9 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+                    <!-- Status dot: Actively taking clients -->
+                    <span
+                        class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-white"
+                        title="Currently Accepting Partnerships"></span>
+                </div>
             </a>
 
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex space-x-12 items-center text-brand-forest">
+            <!-- Desktop Nav: Pill Container -->
+            <nav
+                class="hidden md:flex items-center bg-white/70 backdrop-blur-md border border-brand-stone/60 rounded-full px-2 py-1.5 shadow-soft">
                 <a href="#vision"
-                    class="text-sm tracking-widest uppercase hover:text-brand-terra transition-colors duration-300">Vision</a>
+                    class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Vision</a>
                 <a href="#services"
-                    class="text-sm tracking-widest uppercase hover:text-brand-terra transition-colors duration-300">Expertise</a>
+                    class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Expertise</a>
                 <a href="about.html"
-                    class="text-sm tracking-widest uppercase hover:text-brand-terra transition-colors duration-300">About</a>
+                    class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">About</a>
                 <a href="contact.html"
-                    class="text-sm tracking-widest uppercase hover:text-brand-terra transition-colors duration-300">Contact</a>
+                    class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Contact</a>
             </nav>
 
-            <a href="contact.html"
-                class="hidden md:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-brand-forest text-white text-sm tracking-wide hover:bg-brand-sage transition-colors duration-500 focus-ring">
-                Initiate Dialogue
-            </a>
-
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-brand-forest focus-ring p-1 rounded-sm relative z-[60]">
-                <i data-lucide="menu" class="w-6 h-6 menu-icon"></i>
-                <i data-lucide="x" class="w-6 h-6 close-icon hidden"></i>
-            </button>
+            <!-- Right Side: CTA + Mobile Trigger -->
+            <div class="flex items-center space-x-4">
+                <a href="contact.html"
+                    class="hidden md:inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-brand-forest text-white text-xs tracking-widest uppercase font-semibold hover:bg-brand-sage transition-all duration-500 focus-ring shadow-soft group">
+                    <span>Partner Up</span>
+                    <i data-lucide="arrow-up-right"
+                        class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"></i>
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/70 backdrop-blur-md border border-brand-stone/60 text-brand-forest focus-ring relative z-[60]">
+                    <i data-lucide="menu" class="w-5 h-5 menu-icon"></i>
+                    <i data-lucide="x" class="w-5 h-5 close-icon hidden"></i>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu"
-        class="fixed inset-0 bg-brand-bg/95 backdrop-blur-md z-50 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-opacity duration-700">
-        <nav class="flex flex-col space-y-8 text-center mt-12 w-full px-6">
-            <a href="#vision"
-                class="mobile-link text-3xl font-serif text-brand-forest hover:text-brand-terra transition-colors duration-300">Vision</a>
-            <a href="#services"
-                class="mobile-link text-3xl font-serif text-brand-forest hover:text-brand-terra transition-colors duration-300">Expertise</a>
-            <a href="about.html"
-                class="mobile-link text-3xl font-serif text-brand-forest hover:text-brand-terra transition-colors duration-300">About</a>
-            <a href="contact.html"
-                class="mobile-link text-3xl font-serif text-brand-forest hover:text-brand-terra transition-colors duration-300">Contact</a>
+        class="fixed inset-0 bg-brand-forest z-50 flex flex-col justify-between px-8 pt-28 pb-12 opacity-0 pointer-events-none transition-opacity duration-700">
 
-            <a href="contact.html"
-                class="mobile-link mt-8 inline-flex items-center justify-center w-full max-w-[250px] mx-auto py-4 rounded-full bg-brand-forest text-white tracking-widest uppercase hover:bg-brand-sage transition-colors duration-500 text-sm">Initiate
-                Dialogue</a>
+        <!-- Main Links -->
+        <nav class="flex flex-col space-y-2">
+            <a href="#vision" class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
+                <span
+                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">Vision</span>
+                <i data-lucide="arrow-up-right"
+                    class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
+            </a>
+            <a href="#services"
+                class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
+                <span
+                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">Expertise</span>
+                <i data-lucide="arrow-up-right"
+                    class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
+            </a>
+            <a href="about.html"
+                class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
+                <span
+                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">About
+                    Us</span>
+                <i data-lucide="arrow-up-right"
+                    class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
+            </a>
+            <a href="contact.html" class="mobile-link group flex items-center justify-between py-5">
+                <span
+                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">Contact</span>
+                <i data-lucide="arrow-up-right"
+                    class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
+            </a>
         </nav>
+
+        <!-- Bottom Contact Strip -->
+        <div
+            class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+                <p class="text-white/40 text-xs uppercase tracking-widest mb-1">Direct Line</p>
+                <a href="tel:+27619885671"
+                    class="text-white font-sans text-sm hover:text-brand-sage transition-colors">+27 619885671</a>
+            </div>
+            <a href="contact.html"
+                class="mobile-link inline-flex items-center space-x-2 px-7 py-3.5 rounded-full bg-brand-sage text-white text-sm tracking-widest uppercase font-semibold hover:bg-white hover:text-brand-forest transition-all duration-500">
+                <span>Initiate Dialogue</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
     </div>
 
     <!-- Creative Hero Section -->
@@ -237,7 +331,7 @@
         <div class="max-w-7xl mx-auto w-full gs-reveal relative">
 
             <!-- Absolute Massive Typography sitting on Top -->
-            <div class="relative z-20 mb-[-1rem] md:mb-[-4rem] ml-2 md:ml-12 pointer-events-none">
+            <div class="relative z-20 mb-[-1rem] md:mb-[-4rem] ml-2 md:ml-12 pointer-events-none hero-text">
                 <h1
                     class="text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[8.5rem] leading-[0.9] text-brand-forest tracking-tighter uppercase relative group">
                     <span class="block font-medium drop-shadow-sm transition-transform duration-700 ease-out">Plan
@@ -850,6 +944,21 @@
         // Init Lucide Icons
         lucide.createIcons();
 
+        // Enterprise Preloader Sequence
+        const tl = gsap.timeline({
+            onComplete: () => {
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.body.style.overflow = 'hidden'; // Lock scroll during preload
+
+        tl.to(".loader-logo", { opacity: 1, duration: 0.8, ease: "power2.out" })
+            .to(".loader-line-container", { opacity: 1, duration: 0.5 }, "-=0.4")
+            .to(".loader-line", { width: "100%", duration: 1.2, ease: "power2.inOut" })
+            .to("#preloader", { y: "-100%", duration: 0.8, ease: "power3.inOut", delay: 0.2 })
+            .from(".hero-text", { y: 40, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.4");
+
         // Mobile Menu Logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -893,18 +1002,19 @@
             }
         });
 
-        // Simple GSAP Reveals (Optional enhancement)
+        // Advanced GSAP Reveals
         gsap.registerPlugin(ScrollTrigger);
         const reveals = document.querySelectorAll('.gs-reveal');
 
         reveals.forEach((elem) => {
             gsap.fromTo(elem,
-                { opacity: 0, y: 30 },
+                { opacity: 0, y: 50, scale: 0.98 },
                 {
                     opacity: 1,
                     y: 0,
+                    scale: 1,
                     duration: 1.2,
-                    ease: "power2.out",
+                    ease: "power3.out",
                     scrollTrigger: {
                         trigger: elem,
                         start: "top 85%"
