@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap"
         rel="stylesheet">
 
     <!-- Lucide Icons -->
@@ -108,7 +108,7 @@
             inset: 0;
             z-index: 9999;
             opacity: 0.015;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise'/%3E%3C/filter%3E%3Crect width='400' height='400' fill='%23f8fafc'/%3E%3Crect width='400' height='400' fill='%23000000' opacity='0.05' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
             background-repeat: repeat;
         }
 
@@ -208,6 +208,55 @@
             background-color: #4169E1;
             /* brand-sage */
         }
+
+        /* Scroll Up Button */
+        #scroll-up-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 40;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+        }
+
+        #scroll-up-btn.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #scroll-up-btn:hover {
+            transform: translateY(-4px);
+        }
+
+        /* WhatsApp Button */
+        #whatsapp-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 40;
+        }
+
+        .whatsapp-icon {
+            width: 56px;
+            height: 56px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            transition: all 300ms ease;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
     </style>
 </head>
 
@@ -223,6 +272,24 @@
 
     <!-- Paper Texture Overlay -->
     <div class="texture-overlay"></div>
+
+    <!-- Scroll Up Button -->
+    <button id="scroll-up-btn" 
+        class="w-12 h-12 rounded-full bg-brand-sage text-white shadow-soft-lg hover:shadow-soft-lg hover:bg-brand-terra"
+        title="Scroll to top" aria-label="Scroll to top">
+        <i data-lucide="arrow-up" class="w-5 h-5 mx-auto"></i>
+    </button>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/27619885671?text=Hello%20MorseByte%2C%20I%27m%20interested%20in%20your%20services" 
+        id="whatsapp-btn" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="whatsapp-icon"
+        title="Chat with us on WhatsApp" 
+        aria-label="Chat with us on WhatsApp">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
 
     <!-- Navigation -->
     <header
@@ -259,14 +326,16 @@
             <!-- Right Side: CTA + Mobile Trigger -->
             <div class="flex items-center space-x-4">
                 <a href="contact.html"
-                    class="hidden md:inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-brand-forest text-white text-xs tracking-widest uppercase font-semibold hover:bg-brand-sage transition-all duration-500 focus-ring shadow-soft group">
+                    class="hidden md:inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-brand-forest text-white text-xs tracking-widest uppercase font-semibold hover:bg-brand-sage transition-colors duration-500 group"
+                    aria-label="Partner with MorseByte">
                     <span>Partner Up</span>
                     <i data-lucide="arrow-up-right"
                         class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"></i>
                 </a>
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn"
-                    class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/70 backdrop-blur-md border border-brand-stone/60 text-brand-forest focus-ring relative z-[60]">
+                    class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/70 backdrop-blur-md border border-brand-stone/60 text-brand-forest focus-ring relative z-[60]"
+                    aria-label="Toggle mobile menu">
                     <i data-lucide="menu" class="w-5 h-5 menu-icon"></i>
                     <i data-lucide="x" class="w-5 h-5 close-icon hidden"></i>
                 </button>
@@ -318,7 +387,7 @@
                     class="text-white font-sans text-sm hover:text-brand-sage transition-colors">+27 619885671</a>
             </div>
             <a href="contact.html"
-                class="mobile-link inline-flex items-center space-x-2 px-7 py-3.5 rounded-full bg-brand-sage text-white text-sm tracking-widest uppercase font-semibold hover:bg-white hover:text-brand-forest transition-all duration-500">
+                class="mobile-link inline-flex items-center space-x-2 px-7 py-3.5 rounded-full bg-brand-sage text-white text-sm tracking-widest uppercase font-semibold hover:bg-white hover:text-brand-forest transition-colors duration-500">
                 <span>Initiate Dialogue</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
@@ -366,19 +435,21 @@
 
                         <div class="flex flex-wrap items-center gap-6">
                             <a href="#services"
-                                class="inline-flex items-center px-8 lg:px-10 py-4 lg:py-5 rounded-full bg-brand-forest text-brand-bg hover:bg-brand-sage hover:text-brand-forest transition-colors duration-500 text-sm tracking-widest uppercase focus-ring shadow-soft transform hover:-translate-y-1">
+                                class="inline-flex items-center px-8 lg:px-10 py-4 lg:py-5 rounded-full bg-brand-forest text-brand-bg hover:bg-brand-sage hover:text-brand-forest transition-colors duration-500 font-semibold tracking-wide">
                                 Get Started
                             </a>
 
                             <!-- Mimicking the circular app store icons from the design -->
                             <div class="flex space-x-4 ml-2">
                                 <a href="about.html"
-                                    class="w-12 h-12 rounded-full border border-brand-forest/30 flex items-center justify-center hover:bg-brand-forest hover:text-white transition-colors duration-300 text-brand-forest focus-ring group">
+                                    class="w-12 h-12 rounded-full border border-brand-forest/30 flex items-center justify-center hover:bg-brand-forest hover:text-white transition-colors duration-300 group"
+                                    aria-label="About Us">
                                     <i data-lucide="building"
                                         class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
                                 </a>
                                 <a href="contact.html"
-                                    class="w-12 h-12 rounded-full border border-brand-forest/30 flex items-center justify-center hover:bg-brand-forest hover:text-white transition-colors duration-300 text-brand-forest focus-ring group">
+                                    class="w-12 h-12 rounded-full border border-brand-forest/30 flex items-center justify-center hover:bg-brand-forest hover:text-white transition-colors duration-300 group"
+                                    aria-label="Contact">
                                     <i data-lucide="arrow-up-right"
                                         class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
                                 </a>
@@ -395,12 +466,12 @@
 
                             <!-- Soft drop shadow glowing under the phone -->
                             <div
-                                class="absolute inset-0 bg-brand-forest/10 rounded-[3.5rem] blur-2xl transform translate-y-12 scale-95 pointer-events-none group-hover:bg-brand-forest/15 transition-all duration-700">
+                                class="absolute inset-0 bg-brand-forest/10 rounded-[3.5rem] blur-2xl transform translate-y-12 scale-95 pointer-events-none group-hover:bg-brand-forest/15 transition-colors duration-1000">
                             </div>
 
                             <!-- Phone Body Outer Shell (Dark Mode) -->
                             <div
-                                class="bg-[#1A2421] rounded-[3.5rem] p-3 shadow-2xl border-[10px] border-[#1A2421]/90 overflow-hidden aspect-[9/18.5] flex flex-col justify-between transform group-hover:-translate-y-4 group-hover:-rotate-2 transition-all duration-700 ease-out relative z-10 ring-1 ring-brand-stone/20">
+                                class="bg-[#1A2421] rounded-[3.5rem] p-3 shadow-2xl border-[10px] border-[#1A2421]/90 overflow-hidden aspect-[9/18.5] flex flex-col justify-between transform group-hover:scale-105 group-hover:shadow-2xl transition-transform duration-700">
 
                                 <!-- Inner Phone Screen Canvas (Dark) -->
                                 <div
@@ -473,7 +544,7 @@
                                                 <span class="text-xs font-serif text-brand-bg font-bold">System
                                                     Health</span>
                                                 <span
-                                                    class="text-[10px] bg-brand-sage/10 text-brand-sage px-2 py-0.5 rounded-full uppercase font-bold tracking-wider border border-brand-sage/20">Perfect</span>
+                                                    class="text-[10px] bg-brand-sage/10 text-brand-sage px-2 py-0.5 rounded-full uppercase font-bold tracking-wider border border-brand-sage/20">Perf</span>
                                             </div>
                                         </div>
 
@@ -518,31 +589,31 @@
                 <div class="flex items-center space-x-12 md:space-x-24 px-6 md:px-12">
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/Buy Me A Kota.jpg" alt="Buy Me A Kota"
-                            class="h-10 md:h-12 w-auto object-contain rounded-md mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain rounded-md mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/Dipped SHX.png" alt="Dipped SHX"
-                            class="h-10 md:h-12 w-auto object-contain mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/PTW.png" alt="PTW"
-                            class="h-10 md:h-12 w-auto object-contain mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/Silinga Enterprise.jpeg" alt="Silinga Enterprise"
-                            class="h-10 md:h-12 w-auto object-contain rounded-md mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain rounded-md mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/The Body Barn.png" alt="The Body Barn"
-                            class="h-10 md:h-12 w-auto object-contain mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/WenzaPay App.png" alt="WenzaPay App"
-                            class="h-10 md:h-12 w-auto object-contain mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/XYN.png" alt="XYN"
-                            class="h-10 md:h-12 w-auto object-contain mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain mix-blend-multiply">
                     </div>
                 </div>
 
@@ -550,31 +621,31 @@
                 <div class="flex items-center space-x-12 md:space-x-24 px-6 md:px-12">
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/Buy Me A Kota.jpg" alt="Buy Me A Kota"
-                            class="h-10 md:h-12 w-auto object-contain rounded-md mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain rounded-md mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/Dipped SHX.png" alt="Dipped SHX"
-                            class="h-10 md:h-12 w-auto object-contain mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/PTW.png" alt="PTW"
-                            class="h-10 md:h-12 w-auto object-contain mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/Silinga Enterprise.jpeg" alt="Silinga Enterprise"
-                            class="h-10 md:h-12 w-auto object-contain rounded-md mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain rounded-md mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/The Body Barn.png" alt="The Body Barn"
-                            class="h-10 md:h-12 w-auto object-contain mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/WenzaPay App.png" alt="WenzaPay App"
-                            class="h-10 md:h-12 w-auto object-contain mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain mix-blend-multiply">
                     </div>
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/XYN.png" alt="XYN"
-                            class="h-10 md:h-12 w-auto object-contain mix-blend-multiply">
+                            class="h-16 md:h-20 w-auto object-contain mix-blend-multiply">
                     </div>
                 </div>
             </div>
@@ -864,11 +935,13 @@
                     </p>
                     <div class="flex space-x-4 pt-2">
                         <a href="#"
-                            class="w-10 h-10 rounded-full border border-brand-stone flex items-center justify-center text-brand-forest/60 hover:text-white hover:bg-brand-sage hover:border-brand-sage transition-all duration-300 group">
+                            class="w-10 h-10 rounded-full border border-brand-stone flex items-center justify-center text-brand-forest/60 hover:text-white hover:bg-brand-sage hover:border-brand-sage transition-colors duration-300 group"
+                            aria-label="LinkedIn">
                             <i data-lucide="linkedin" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
                         </a>
                         <a href="#"
-                            class="w-10 h-10 rounded-full border border-brand-stone flex items-center justify-center text-brand-forest/60 hover:text-white hover:bg-brand-sage hover:border-brand-sage transition-all duration-300 group">
+                            class="w-10 h-10 rounded-full border border-brand-stone flex items-center justify-center text-brand-forest/60 hover:text-white hover:bg-brand-sage hover:border-brand-sage transition-colors duration-300 group"
+                            aria-label="Twitter">
                             <i data-lucide="twitter" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
                         </a>
                     </div>
@@ -999,48 +1072,54 @@
             }
         }
 
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', toggleMenu);
-            mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
-        }
+        mobileMenuBtn.addEventListener('click', toggleMenu);
 
-        // Subtle Scroll effect for Navbar
-        const navbar = document.getElementById('navbar');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Smooth Scroll + Navbar bg on scroll
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('shadow-soft');
-                navbar.classList.add('border-brand-stone/20');
-                navbar.classList.remove('border-brand-stone/0');
+            const navbar = document.getElementById('navbar');
+            const scrollUpBtn = document.getElementById('scroll-up-btn');
+
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-white/98', 'border-brand-stone');
+                scrollUpBtn.classList.add('show');
             } else {
-                navbar.classList.remove('shadow-soft');
-                navbar.classList.remove('border-brand-stone/20');
-                navbar.classList.add('border-brand-stone/0');
+                navbar.classList.remove('bg-white/98', 'border-brand-stone');
+                scrollUpBtn.classList.remove('show');
             }
         });
 
-        // Advanced GSAP Reveals
-        gsap.registerPlugin(ScrollTrigger);
-        const reveals = document.querySelectorAll('.gs-reveal');
+        // Scroll Up Button Functionality
+        document.getElementById('scroll-up-btn').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
-        reveals.forEach((elem) => {
-            gsap.fromTo(elem,
-                { opacity: 0, y: 50, scale: 0.98 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    scale: 1,
-                    duration: 1.2,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: elem,
-                        start: "top 85%"
-                    }
-                }
-            );
+        // Scroll Reveal Animation (GSAP + ScrollTrigger)
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Reveal on scroll for service cards, text, and images
+        const reveals = document.querySelectorAll('.gs-reveal');
+        reveals.forEach(element => {
+            gsap.to(element, {
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top 80%',
+                    end: 'top 20%',
+                    toggleActions: 'play none none reverse'
+                },
+                duration: 1,
+                opacity: 1,
+                y: 0,
+                ease: 'power3.out'
+            });
         });
     </script>
-    <!-- Cookie Popup Script -->
-    <script src="cookie-popup.js"></script>
 </body>
 
 </html>
