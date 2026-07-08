@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300[...]"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
         rel="stylesheet">
 
     <!-- Lucide Icons -->
@@ -60,12 +60,12 @@
                     },
                     colors: {
                         brand: {
-                            bg: '#F8FAFC',           // Slate 50 (Cooler)
-                            forest: '#0F172A',       // Slate 900 (Dark Navy replacing dark green)
-                            sage: '#4169E1',         // Royal Blue (Requested)
-                            clay: '#E2E8F0',         // Slate 200 (Soft Blue Clay)
-                            stone: '#CBD5E1',        // Slate 300 (Border stone)
-                            terra: '#2563EB'         // Blue 600 (Interactive)
+                            bg: '#F8FAFC',
+                            forest: '#0F172A',
+                            sage: '#4169E1',
+                            clay: '#E2E8F0',
+                            stone: '#CBD5E1',
+                            terra: '#2563EB'
                         }
                     },
                     boxShadow: {
@@ -101,18 +101,16 @@
             font-family: 'Playfair Display', serif;
         }
 
-        /* Essential SVG Noise Texture Overlay */
         .texture-overlay {
             pointer-events: none;
             position: fixed;
             inset: 0;
             z-index: 9999;
             opacity: 0.015;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFreque[...]");
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise'/%3E%3C/filter%3E%3Crect width='400' height='400' fill='%23f5f5f5'/%3E%3Crect width='400' height='400' fill='%23000' opacity='0.5' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
             background-repeat: repeat;
         }
 
-        /* Custom Arches */
         .arch-img {
             border-top-left-radius: 9999px;
             border-top-right-radius: 9999px;
@@ -121,7 +119,6 @@
             border-bottom-right-radius: 12px;
         }
 
-        /* Eased Transitions */
         .graceful-hover {
             transition: all 500ms cubic-bezier(0.25, 0.1, 0.25, 1);
         }
@@ -136,7 +133,6 @@
             box-shadow: 0 0 0 2px #F8FAFC, 0 0 0 4px #4169E1;
         }
 
-        /* Selection styling */
         ::selection {
             background-color: #4169E1;
             color: #F8FAFC;
@@ -148,7 +144,6 @@
             stroke-width: 1;
         }
 
-        /* Infinite Carousel Animation */
         @keyframes scroll {
             0% {
                 transform: translateX(0);
@@ -169,12 +164,10 @@
             animation-play-state: paused;
         }
 
-        /* Enterprise Preloader */
         #preloader {
             position: fixed;
             inset: 0;
             background-color: #0F172A;
-            /* brand-forest */
             z-index: 99999;
             display: flex;
             justify-content: center;
@@ -206,10 +199,8 @@
             height: 100%;
             width: 0%;
             background-color: #4169E1;
-            /* brand-sage */
         }
 
-        /* Scroll Up Button */
         #scroll-up-btn {
             position: fixed;
             bottom: 2rem;
@@ -229,7 +220,6 @@
             transform: translateY(-4px);
         }
 
-        /* WhatsApp Button */
         #whatsapp-btn {
             position: fixed;
             bottom: 2rem;
@@ -262,7 +252,6 @@
 
 <body class="antialiased">
 
-    <!-- Enterprise Preloader -->
     <div id="preloader">
         <img src="logo.png" alt="MorseByte Loader" class="loader-logo">
         <div class="loader-line-container">
@@ -270,17 +259,14 @@
         </div>
     </div>
 
-    <!-- Paper Texture Overlay -->
     <div class="texture-overlay"></div>
 
-    <!-- Scroll Up Button -->
     <button id="scroll-up-btn" 
         class="w-12 h-12 rounded-full bg-brand-sage text-white shadow-soft-lg hover:shadow-soft-lg hover:bg-brand-terra"
         title="Scroll to top" aria-label="Scroll to top">
         <i data-lucide="arrow-up" class="w-5 h-5 mx-auto"></i>
     </button>
 
-    <!-- WhatsApp Button -->
     <a href="https://wa.me/27619885671?text=Hello%20MorseByte%2C%20I%27m%20interested%20in%20your%20services" 
         id="whatsapp-btn" 
         target="_blank" 
@@ -291,26 +277,22 @@
         <i data-lucide="message-circle" class="w-6 h-6"></i>
     </a>
 
-    <!-- Navigation -->
     <header
         class="fixed w-full top-0 z-50 transition-all duration-700 bg-white/95 backdrop-blur-md border-b border-brand-stone/40"
         id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
 
-            <!-- Logo -->
             <a href="index.html"
                 class="flex items-center space-x-3 cursor-pointer group focus-ring rounded-sm flex-shrink-0">
                 <div class="relative">
                     <img src="logo.png" alt="MorseByte"
                         class="h-9 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-500">
-                    <!-- Status dot: Actively taking clients -->
                     <span
                         class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-white"
                         title="Currently Accepting Partnerships"></span>
                 </div>
             </a>
 
-            <!-- Desktop Nav: Pill Container -->
             <nav
                 class="hidden md:flex items-center bg-white/70 backdrop-blur-md border border-brand-stone/60 rounded-full px-2 py-1.5 shadow-soft">
                 <a href="#vision"
@@ -323,7 +305,6 @@
                     class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Contact</a>
             </nav>
 
-            <!-- Right Side: CTA + Mobile Trigger -->
             <div class="flex items-center space-x-4">
                 <a href="contact.html"
                     class="hidden md:inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-brand-forest text-white text-xs tracking-widest uppercase font-semibold hover:bg-brand-sage transition-colors duration-300 group"
@@ -332,7 +313,6 @@
                     <i data-lucide="arrow-up-right"
                         class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"></i>
                 </a>
-                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn"
                     class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/70 backdrop-blur-md border border-brand-stone/60 text-brand-forest focus-ring relative z-[60]"
                     aria-label="Toggle mobile menu">
@@ -343,11 +323,9 @@
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu"
         class="fixed inset-0 bg-brand-forest z-50 flex flex-col justify-between px-8 pt-28 pb-12 opacity-0 pointer-events-none transition-opacity duration-700">
 
-        <!-- Main Links -->
         <nav class="flex flex-col space-y-2">
             <a href="#vision" class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
                 <span
@@ -365,8 +343,7 @@
             <a href="about.html"
                 class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
                 <span
-                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">About
-                    Us</span>
+                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">About Us</span>
                 <i data-lucide="arrow-up-right"
                     class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
             </a>
@@ -378,7 +355,6 @@
             </a>
         </nav>
 
-        <!-- Bottom Contact Strip -->
         <div
             class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
@@ -387,34 +363,29 @@
                     class="text-white font-sans text-sm hover:text-brand-sage transition-colors">+27 619885671</a>
             </div>
             <a href="contact.html"
-                class="mobile-link inline-flex items-center space-x-2 px-7 py-3.5 rounded-full bg-brand-sage text-white text-sm tracking-widest uppercase font-semibold hover:bg-white hover:text-brand-sage transition-colors duration-300"
+                class="mobile-link inline-flex items-center space-x-2 px-7 py-3.5 rounded-full bg-brand-sage text-white text-sm tracking-widest uppercase font-semibold hover:bg-white hover:text-brand-sage transition-colors duration-300">
                 <span>Initiate Dialogue</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
         </div>
     </div>
 
-    <!-- Creative Hero Section -->
     <section
         class="min-h-screen pt-32 md:pt-48 pb-16 md:pb-24 px-4 md:px-6 overflow-hidden flex flex-col justify-center">
         <div class="max-w-7xl mx-auto w-full gs-reveal relative">
 
-            <!-- Absolute Massive Typography sitting on Top -->
             <div class="relative z-20 mb-[-1rem] md:mb-[-4rem] ml-2 md:ml-12 pointer-events-none hero-text">
                 <h1
                     class="text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[8.5rem] leading-[0.9] text-brand-forest tracking-tighter uppercase relative group">
-                    <span class="block font-medium drop-shadow-sm transition-transform duration-700 ease-out">Plan
-                        Your</span>
+                    <span class="block font-medium drop-shadow-sm transition-transform duration-700 ease-out">Plan Your</span>
                     <span
                         class="block italic font-light ml-2 md:ml-10 text-brand-forest/90 drop-shadow-md transition-transform duration-700 delay-100 ease-out">Evolution</span>
                 </h1>
             </div>
 
-            <!-- The Tinted "Island" Container -->
             <div
                 class="w-full bg-[#EBEAE5] rounded-[3rem] md:rounded-[4rem] px-8 md:px-16 pt-32 lg:pt-40 pb-16 relative shadow-soft overflow-visible border border-brand-stone/30">
 
-                <!-- Sweeping SVG Background line mirroring the reference design -->
                 <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-60 mix-blend-multiply"
                     viewBox="0 0 1000 400" preserveAspectRatio="none">
                     <path d="M-100,350 C200,500 400,-100 700,200 C900,450 1100,50 1200,50" fill="none" stroke="#DCCFC2"
@@ -423,7 +394,6 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 w-full h-full">
 
-                    <!-- Left: Description and Buttons -->
                     <div class="lg:col-span-6 flex flex-col justify-end xl:pb-10 max-w-lg mx-auto lg:mx-0">
                         <p
                             class="font-sans text-xl sm:text-2xl text-brand-forest/80 leading-relaxed mb-10 font-light mix-blend-multiply">
@@ -435,11 +405,10 @@
 
                         <div class="flex flex-wrap items-center gap-6">
                             <a href="#services"
-                                class="inline-flex items-center px-8 lg:px-10 py-4 lg:py-5 rounded-full bg-brand-forest text-brand-bg hover:bg-brand-sage hover:text-brand-forest transition-colors duration-300"
+                                class="inline-flex items-center px-8 lg:px-10 py-4 lg:py-5 rounded-full bg-brand-forest text-brand-bg hover:bg-brand-sage hover:text-brand-forest transition-colors duration-300">
                                 Get Started
                             </a>
 
-                            <!-- Mimicking the circular app store icons from the design -->
                             <div class="flex space-x-4 ml-2">
                                 <a href="about.html"
                                     class="w-12 h-12 rounded-full border border-brand-forest/30 flex items-center justify-center hover:bg-brand-forest hover:text-white transition-colors duration-300 group"
@@ -457,27 +426,21 @@
                         </div>
                     </div>
 
-                    <!-- Right: The Huge Overlapping Mobile Mockup -->
                     <div class="lg:col-span-6 relative mt-16 lg:mt-0 flex justify-center lg:block">
 
-                        <!-- Floating Container that physically breaks out of the top of the 'island' -->
                         <div
                             class="relative w-full max-w-[320px] lg:max-w-[380px] lg:absolute lg:right-4 lg:-top-[26rem] z-30 group cursor-pointer perspective-1000">
 
-                            <!-- Soft drop shadow glowing under the phone -->
                             <div
                                 class="absolute inset-0 bg-brand-forest/10 rounded-[3.5rem] blur-2xl transform translate-y-12 scale-95 pointer-events-none group-hover:bg-brand-forest/15 transition-colors duration-1000">
                             </div>
 
-                            <!-- Phone Body Outer Shell (Dark Mode) -->
                             <div
                                 class="bg-[#1A2421] rounded-[3.5rem] p-3 shadow-2xl border-[10px] border-[#1A2421]/90 overflow-hidden aspect-[9/18.5] flex flex-col justify-between transform group-hover:scale-105 transition-transform duration-700">
 
-                                <!-- Inner Phone Screen Canvas (Dark) -->
                                 <div
                                     class="relative flex flex-col h-full bg-[#121A17] rounded-[2.5rem] overflow-hidden border border-white/5 overflow-y-auto hide-scrollbars">
 
-                                    <!-- Animated Wave Header inside Phone mimicking the UI in the image -->
                                     <svg class="absolute top-0 inset-x-0 w-full text-brand-sage/10 mix-blend-screen"
                                         viewBox="0 0 100 50" preserveAspectRatio="none" style="height: 120px;">
                                         <path d="M0,0 L100,0 L100,30 Q80,50 50,30 Q20,10 0,30 Z" fill="currentColor">
@@ -486,7 +449,6 @@
                                             stroke-width="0.5" stroke-opacity="0.3"></path>
                                     </svg>
 
-                                    <!-- Top UI Status Bar -->
                                     <div class="relative z-10 flex justify-between items-center pb-2 pt-4 px-6 mb-6">
                                         <span
                                             class="text-[12px] font-sans font-bold text-brand-bg tracking-wider opacity-90">9:41</span>
@@ -500,11 +462,9 @@
                                         </div>
                                     </div>
 
-                                    <!-- Internal Phone Content -->
                                     <div class="px-6 relative z-10 flex-grow flex flex-col mb-4">
                                         <h2 class="font-serif text-3xl text-brand-bg mb-6">My Agents</h2>
 
-                                        <!-- Fake Tabs -->
                                         <div class="flex space-x-6 border-b border-white/10 pb-3 mb-6">
                                             <span
                                                 class="text-[10px] font-bold tracking-widest uppercase text-brand-bg border-b-2 border-brand-sage pb-1 -mb-3">Active</span>
@@ -514,7 +474,6 @@
                                                 class="text-[10px] font-bold tracking-widest uppercase text-brand-bg/40">Settings</span>
                                         </div>
 
-                                        <!-- Active AI Card mimicking flight ticket/trip card -->
                                         <div
                                             class="bg-[#212D29] rounded-2xl p-5 shadow-soft border border-white/5 mb-4 transform hover:scale-[1.02] transition-transform">
                                             <div class="flex justify-between items-start mb-3">
@@ -522,17 +481,14 @@
                                                     <span
                                                         class="w-2 h-2 rounded-full bg-brand-sage animate-pulse"></span>
                                                     <span
-                                                        class="text-[10px] uppercase font-bold tracking-wide text-brand-bg">Lead
-                                                        Routing</span>
+                                                        class="text-[10px] uppercase font-bold tracking-wide text-brand-bg">Lead Routing</span>
                                                 </div>
                                                 <i data-lucide="more-horizontal" class="w-4 h-4 text-brand-bg/50"></i>
                                             </div>
                                             <h3 class="font-serif text-xl text-brand-bg mb-1">Qualifying 14 Leads</h3>
-                                            <p class="text-[10px] text-brand-bg/60 font-sans tracking-wide">NLP routing
-                                                in progress.</p>
+                                            <p class="text-[10px] text-brand-bg/60 font-sans tracking-wide">NLP routing in progress.</p>
                                         </div>
 
-                                        <!-- Secondary Card (Image based) -->
                                         <div
                                             class="bg-[#1A2421] rounded-2xl p-2 shadow-inner border border-white/5 mt-auto">
                                             <div class="relative w-full h-24 rounded-xl overflow-hidden mb-2">
@@ -541,8 +497,7 @@
                                                     alt="Server">
                                             </div>
                                             <div class="px-2 pb-1 flex justify-between items-center">
-                                                <span class="text-xs font-serif text-brand-bg font-bold">System
-                                                    Health</span>
+                                                <span class="text-xs font-serif text-brand-bg font-bold">System Health</span>
                                                 <span
                                                     class="text-[10px] bg-brand-sage/10 text-brand-sage px-2 py-0.5 rounded-full uppercase font-bold tracking-wider border border-brand-sage/20">Perfect</span>
                                             </div>
@@ -550,7 +505,6 @@
 
                                     </div>
 
-                                    <!-- Bottom Auth/Navigation Bar -->
                                     <div
                                         class="bg-[#161F1B]/90 backdrop-blur-xl border-t border-white/5 px-6 py-4 flex justify-between items-center mt-auto shrink-0 rounded-b-[2.5rem]">
                                         <i data-lucide="home" class="w-5 h-5 text-brand-sage"></i>
@@ -569,23 +523,18 @@
         </div>
     </section>
 
-    <!-- Trusted Clients Carousel -->
     <section
         class="py-12 border-b border-brand-stone/40 bg-brand-bg relative overflow-hidden flex flex-col items-center">
         <p class="text-[10px] font-sans uppercase tracking-[0.2em] text-brand-forest/40 mb-8 font-bold text-center">
             Architecting the infrastructure for</p>
 
-        <!-- Scrolling Container -->
         <div class="w-full relative max-w-[100vw] overflow-hidden flex">
 
-            <!-- Left Gradient Mask -->
             <div
                 class="absolute left-0 top-0 bottom-0 w-16 md:w-48 bg-gradient-to-r from-brand-bg to-transparent z-10 pointer-events-none">
             </div>
 
-            <!-- Scrolling Track -->
             <div class="animate-scroll transition-opacity duration-300 hover:opacity-100 opacity-70">
-                <!-- Group 1 -->
                 <div class="flex items-center space-x-12 md:space-x-24 px-6 md:px-12">
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/Buy Me A Kota.jpg" alt="Buy Me A Kota"
@@ -617,7 +566,6 @@
                     </div>
                 </div>
 
-                <!-- Group 2 (Duplicate for infinite scroll) -->
                 <div class="flex items-center space-x-12 md:space-x-24 px-6 md:px-12">
                     <div class="flex items-center justify-center hover:scale-105 transition-transform duration-300">
                         <img src="clients/Buy Me A Kota.jpg" alt="Buy Me A Kota"
@@ -650,7 +598,6 @@
                 </div>
             </div>
 
-            <!-- Right Gradient Mask -->
             <div
                 class="absolute right-0 top-0 bottom-0 w-16 md:w-48 bg-gradient-to-l from-brand-bg to-transparent z-10 pointer-events-none">
             </div>
@@ -658,7 +605,6 @@
         </div>
     </section>
 
-    <!-- Mission & Vision Pull Quote -->
     <section class="py-32 px-6 bg-brand-bg relative" id="vision">
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <i data-lucide="quote" class="w-12 h-12 text-brand-clay mx-auto mb-10 stroke-[1]"></i>
@@ -675,7 +621,6 @@
         </div>
     </section>
 
-    <!-- The 6 Pillars (Services) -->
     <section class="py-32 px-6 border-t border-brand-stone" id="services">
         <div class="max-w-7xl mx-auto">
             <div class="max-w-2xl mb-24 lg:mb-32">
@@ -686,10 +631,8 @@
                 </p>
             </div>
 
-            <!-- Staggered Grid Layout -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
 
-                <!-- Pillar 1: AI Automation (THE MAJOR SERVICE) -->
                 <div
                     class="bg-brand-clay/20 p-10 rounded-[2rem] border border-brand-stone/50 graceful-hover group relative overflow-hidden hover:bg-brand-sage hover:border-brand-sage transition-all duration-500">
                     <div
@@ -715,8 +658,7 @@
                             class="text-xs uppercase tracking-widest text-brand-forest/60 group-hover:text-white/80 transition-colors duration-500 flex items-center">
                             <span
                                 class="w-1 h-1 bg-brand-terra group-hover:bg-white transition-colors duration-500 rounded-full mr-3 block"></span>
-                            Robotic Process
-                            Automation
+                            Robotic Process Automation
                         </li>
                         <li
                             class="text-xs uppercase tracking-widest text-brand-forest/60 group-hover:text-white/80 transition-colors duration-500 flex items-center">
@@ -727,7 +669,6 @@
                     </ul>
                 </div>
 
-                <!-- Pillar 2: Web & Native -->
                 <div
                     class="bg-white p-10 rounded-[2rem] border border-brand-stone/50 graceful-hover group hover:bg-brand-sage hover:border-brand-sage transition-all duration-500 lg:translate-y-12">
                     <i data-lucide="smartphone"
@@ -755,7 +696,6 @@
                     </ul>
                 </div>
 
-                <!-- Pillar 3: Cloud -->
                 <div
                     class="bg-white p-10 rounded-[2rem] border border-brand-stone/50 graceful-hover group hover:bg-brand-sage hover:border-brand-sage transition-all duration-500">
                     <i data-lucide="cloud"
@@ -783,7 +723,6 @@
                     </ul>
                 </div>
 
-                <!-- Pillar 4: Cyber -->
                 <div
                     class="bg-white p-10 rounded-[2rem] border border-brand-stone/50 graceful-hover group hover:bg-brand-sage hover:border-brand-sage transition-all duration-500">
                     <i data-lucide="shield-check"
@@ -811,7 +750,6 @@
                     </ul>
                 </div>
 
-                <!-- Pillar 5: DevOps -->
                 <div
                     class="bg-white p-10 rounded-[2rem] border border-brand-stone/50 graceful-hover group hover:bg-brand-sage hover:border-brand-sage transition-all duration-500 lg:translate-y-12">
                     <i data-lucide="git-merge"
@@ -839,7 +777,6 @@
                     </ul>
                 </div>
 
-                <!-- Pillar 6: DevSecOps -->
                 <div
                     class="bg-white p-10 rounded-[2rem] border border-brand-stone/50 graceful-hover group hover:bg-brand-sage hover:border-brand-sage transition-all duration-500 md:col-span-2 lg:col-span-1">
                     <i data-lucide="lock"
@@ -871,14 +808,12 @@
         </div>
     </section>
 
-    <!-- Target Audience (Partnership) -->
     <section class="py-32 px-6 bg-[#F2F0EB] border-y border-brand-stone" id="audience">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-center">
 
             <div class="w-full md:w-5/12">
                 <div
                     class="w-full aspect-square arch-img bg-brand-clay overflow-hidden relative shadow-soft flex items-center justify-center border border-brand-stone group cursor-pointer">
-                    <!-- Botanical Image -->
                     <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000&auto=format&fit=crop"
                         alt="Botanical Desk"
                         class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-70 group-hover:scale-105 transition-transform duration-1000 grayscale sepia-[0.2]">
@@ -886,8 +821,7 @@
                         class="absolute inset-x-8 bottom-8 p-6 bg-brand-bg/90 backdrop-blur-md rounded-2xl border border-white shadow-soft">
                         <i data-lucide="building-2" class="w-6 h-6 text-brand-forest mb-4 stroke-[1.5]"></i>
                         <p class="font-serif text-xl text-brand-forest mb-1">Built for SME Scale.</p>
-                        <p class="text-xs text-brand-forest/60 font-sans tracking-wide">Financial, Medical, Legal &
-                            E-commerce.</p>
+                        <p class="text-xs text-brand-forest/60 font-sans tracking-wide">Financial, Medical, Legal & E-commerce.</p>
                     </div>
                 </div>
             </div>
@@ -922,12 +856,10 @@
         </div>
     </section>
 
-    <!-- Refined Smart Footer -->
     <footer class="bg-brand-bg pt-24 pb-12 px-6 border-t border-brand-stone" id="contact">
         <div class="max-w-7xl mx-auto">
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
-                <!-- Brand Pillar -->
                 <div class="space-y-6">
                     <img src="logo.png" alt="MorseByte" class="h-8 object-contain mix-blend-multiply opacity-90">
                     <p class="text-sm text-brand-forest/70 font-sans leading-relaxed pr-4">
@@ -947,7 +879,6 @@
                     </div>
                 </div>
 
-                <!-- Navigation -->
                 <div>
                     <h4 class="font-serif text-lg text-brand-forest mb-6">Navigation</h4>
                     <ul class="space-y-4">
@@ -957,8 +888,7 @@
                         </li>
                         <li><a href="about.html"
                                 class="flex items-center space-x-2 text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300 group"><span
-                                    class="w-1.5 h-1.5 rounded-full bg-brand-stone group-hover:bg-brand-sage transition-colors"></span><span>About
-                                    Us</span></a></li>
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-stone group-hover:bg-brand-sage transition-colors"></span><span>About Us</span></a></li>
                         <li><a href="index.html#services"
                                 class="flex items-center space-x-2 text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300 group"><span
                                     class="w-1.5 h-1.5 rounded-full bg-brand-stone group-hover:bg-brand-sage transition-colors"></span><span>Expertise</span></a>
@@ -970,23 +900,18 @@
                     </ul>
                 </div>
 
-                <!-- Legal -->
                 <div>
                     <h4 class="font-serif text-lg text-brand-forest mb-6">Legal Framework</h4>
                     <ul class="space-y-4">
                         <li><a href="#"
-                                class="text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300">Privacy
-                                Policy</a></li>
+                                class="text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300">Privacy Policy</a></li>
                         <li><a href="#"
-                                class="text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300">Terms
-                                of Service</a></li>
+                                class="text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300">Terms of Service</a></li>
                         <li><a href="#"
-                                class="text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300">Ethics
-                                & Assurance</a></li>
+                                class="text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300">Ethics & Assurance</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact -->
                 <div>
                     <h4 class="font-serif text-lg text-brand-forest mb-6">Direct Line</h4>
                     <ul class="space-y-5">
@@ -1016,18 +941,14 @@
         </div>
     </footer>
 
-    <!-- Main JavaScript -->
     <script>
-        // Create a custom hook that runs after Lucide hydration
         const initializeLucideIcons = () => {
             lucide.createIcons();
         }
 
-        // Create a callback for when the page has fully loaded
         window.addEventListener('load', () => {
             initializeLucideIcons();
 
-            // Scroll button functionality
             const scrollBtn = document.getElementById('scroll-up-btn');
             const whatsappBtn = document.getElementById('whatsapp-btn');
 
@@ -1043,7 +964,6 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // Mobile menu functionality
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const menuIcon = document.querySelector('.menu-icon');
@@ -1066,31 +986,26 @@
                 });
             });
 
-            // Preloader
-            window.addEventListener('load', () => {
-                const preloader = document.getElementById('preloader');
-                const loaderLogo = document.querySelector('.loader-logo');
-                const loaderLineContainer = document.querySelector('.loader-line-container');
-                const loaderLine = document.querySelector('.loader-line');
+            const preloader = document.getElementById('preloader');
+            const loaderLogo = document.querySelector('.loader-logo');
+            const loaderLineContainer = document.querySelector('.loader-line-container');
+            const loaderLine = document.querySelector('.loader-line');
 
-                // Timeline for animations
-                let tl = gsap.timeline();
+            let tl = gsap.timeline();
 
-                tl.to(loaderLogo, { opacity: 1, duration: 0.3 });
-                tl.to(loaderLineContainer, { opacity: 1, duration: 0.3 }, 0);
-                tl.to(loaderLine, { width: '100%', duration: 2, ease: 'power2.inOut' });
-                tl.to(preloader, { opacity: 0, duration: 0.5, delay: 0.2, pointerEvents: 'none' });
+            tl.to(loaderLogo, { opacity: 1, duration: 0.3 });
+            tl.to(loaderLineContainer, { opacity: 1, duration: 0.3 }, 0);
+            tl.to(loaderLine, { width: '100%', duration: 2, ease: 'power2.inOut' });
+            tl.to(preloader, { opacity: 0, duration: 0.5, delay: 0.2, pointerEvents: 'none' });
 
-                // GSAP scroll animations
-                gsap.registerPlugin(ScrollTrigger);
+            gsap.registerPlugin(ScrollTrigger);
 
-                gsap.utils.toArray('.gs-reveal').forEach((elem) => {
-                    ScrollTrigger.create({
-                        trigger: elem,
-                        onEnter: () => {
-                            gsap.from(elem, { opacity: 0, duration: 1, ease: 'power3.inOut' });
-                        }
-                    });
+            gsap.utils.toArray('.gs-reveal').forEach((elem) => {
+                ScrollTrigger.create({
+                    trigger: elem,
+                    onEnter: () => {
+                        gsap.from(elem, { opacity: 0, duration: 1, ease: 'power3.inOut' });
+                    }
                 });
             });
         });
