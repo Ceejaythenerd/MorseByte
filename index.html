@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,300[...]"
         rel="stylesheet">
 
     <!-- Lucide Icons -->
@@ -108,7 +108,7 @@
             inset: 0;
             z-index: 9999;
             opacity: 0.015;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise'/%3E%3C/filter%3E%3Crect width='400' height='400' fill='%23f8fafc'/%3E%3Crect width='400' height='400' fill='%23000000' opacity='0.05' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFreque[...]");
             background-repeat: repeat;
         }
 
@@ -213,7 +213,7 @@
         #scroll-up-btn {
             position: fixed;
             bottom: 2rem;
-            right: 2rem;
+            right: 5.5rem;
             z-index: 40;
             opacity: 0;
             pointer-events: none;
@@ -326,7 +326,7 @@
             <!-- Right Side: CTA + Mobile Trigger -->
             <div class="flex items-center space-x-4">
                 <a href="contact.html"
-                    class="hidden md:inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-brand-forest text-white text-xs tracking-widest uppercase font-semibold hover:bg-brand-sage transition-colors duration-500 group"
+                    class="hidden md:inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-brand-forest text-white text-xs tracking-widest uppercase font-semibold hover:bg-brand-sage transition-colors duration-300 group"
                     aria-label="Partner with MorseByte">
                     <span>Partner Up</span>
                     <i data-lucide="arrow-up-right"
@@ -387,7 +387,7 @@
                     class="text-white font-sans text-sm hover:text-brand-sage transition-colors">+27 619885671</a>
             </div>
             <a href="contact.html"
-                class="mobile-link inline-flex items-center space-x-2 px-7 py-3.5 rounded-full bg-brand-sage text-white text-sm tracking-widest uppercase font-semibold hover:bg-white hover:text-brand-forest transition-colors duration-500">
+                class="mobile-link inline-flex items-center space-x-2 px-7 py-3.5 rounded-full bg-brand-sage text-white text-sm tracking-widest uppercase font-semibold hover:bg-white hover:text-brand-sage transition-colors duration-300"
                 <span>Initiate Dialogue</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
@@ -435,7 +435,7 @@
 
                         <div class="flex flex-wrap items-center gap-6">
                             <a href="#services"
-                                class="inline-flex items-center px-8 lg:px-10 py-4 lg:py-5 rounded-full bg-brand-forest text-brand-bg hover:bg-brand-sage hover:text-brand-forest transition-colors duration-500 font-semibold tracking-wide">
+                                class="inline-flex items-center px-8 lg:px-10 py-4 lg:py-5 rounded-full bg-brand-forest text-brand-bg hover:bg-brand-sage hover:text-brand-forest transition-colors duration-300"
                                 Get Started
                             </a>
 
@@ -471,7 +471,7 @@
 
                             <!-- Phone Body Outer Shell (Dark Mode) -->
                             <div
-                                class="bg-[#1A2421] rounded-[3.5rem] p-3 shadow-2xl border-[10px] border-[#1A2421]/90 overflow-hidden aspect-[9/18.5] flex flex-col justify-between transform group-hover:scale-105 group-hover:shadow-2xl transition-transform duration-700">
+                                class="bg-[#1A2421] rounded-[3.5rem] p-3 shadow-2xl border-[10px] border-[#1A2421]/90 overflow-hidden aspect-[9/18.5] flex flex-col justify-between transform group-hover:scale-105 transition-transform duration-700">
 
                                 <!-- Inner Phone Screen Canvas (Dark) -->
                                 <div
@@ -544,7 +544,7 @@
                                                 <span class="text-xs font-serif text-brand-bg font-bold">System
                                                     Health</span>
                                                 <span
-                                                    class="text-[10px] bg-brand-sage/10 text-brand-sage px-2 py-0.5 rounded-full uppercase font-bold tracking-wider border border-brand-sage/20">Perf</span>
+                                                    class="text-[10px] bg-brand-sage/10 text-brand-sage px-2 py-0.5 rounded-full uppercase font-bold tracking-wider border border-brand-sage/20">Perfect</span>
                                             </div>
                                         </div>
 
@@ -935,12 +935,12 @@
                     </p>
                     <div class="flex space-x-4 pt-2">
                         <a href="#"
-                            class="w-10 h-10 rounded-full border border-brand-stone flex items-center justify-center text-brand-forest/60 hover:text-white hover:bg-brand-sage hover:border-brand-sage transition-colors duration-300 group"
+                            class="w-10 h-10 rounded-full border border-brand-stone flex items-center justify-center text-brand-forest/60 hover:text-white hover:bg-brand-sage hover:border-brand-sage transition-all duration-300 group"
                             aria-label="LinkedIn">
                             <i data-lucide="linkedin" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
                         </a>
                         <a href="#"
-                            class="w-10 h-10 rounded-full border border-brand-stone flex items-center justify-center text-brand-forest/60 hover:text-white hover:bg-brand-sage hover:border-brand-sage transition-colors duration-300 group"
+                            class="w-10 h-10 rounded-full border border-brand-stone flex items-center justify-center text-brand-forest/60 hover:text-white hover:bg-brand-sage hover:border-brand-sage transition-all duration-300 group"
                             aria-label="Twitter">
                             <i data-lucide="twitter" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
                         </a>
@@ -1006,120 +1006,96 @@
                                 <span>+27 619885671</span>
                             </a>
                         </li>
-                        <li class="flex items-start space-x-4 text-sm font-sans text-brand-forest/70">
-                            <i data-lucide="map-pin" class="w-5 h-5 mt-0.5 text-brand-stone"></i>
-                            <span>7th Floor, Radisson Blu Hotel<br>Sandton Isle, 126 Rivonia Road, Sandton, 2196</span>
-                        </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Bottom Copyright -->
-            <div
-                class="border-t border-brand-stone pt-8 flex flex-col md:flex-row justify-between items-center text-xs tracking-widest uppercase text-brand-forest/50 font-sans">
-                <p>&copy; 2026 MorseByte. Architecting the future.</p>
-                <div class="mt-4 md:mt-0 flex space-x-6">
-                    <a href="contact.html"
-                        class="hover:text-brand-sage transition-colors font-bold text-brand-sage tracking-widest text-[10px] uppercase">Initiate
-                        Dialogue <i data-lucide="arrow-right" class="w-3 h-3 inline pb-0.5"></i></a>
-                </div>
+            <div class="border-t border-brand-stone/40 pt-12">
+                <p class="text-xs text-brand-forest/50 font-sans text-center">© 2024 MorseByte. All rights reserved.</p>
             </div>
-
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Main JavaScript -->
     <script>
-        // Init Lucide Icons
-        lucide.createIcons();
-
-        // Enterprise Preloader Sequence
-        const tl = gsap.timeline({
-            onComplete: () => {
-                document.body.style.overflow = '';
-            }
-        });
-
-        document.body.style.overflow = 'hidden'; // Lock scroll during preload
-
-        tl.to(".loader-logo", { opacity: 1, duration: 0.8, ease: "power2.out" })
-            .to(".loader-line-container", { opacity: 1, duration: 0.5 }, "-=0.4")
-            .to(".loader-line", { width: "100%", duration: 1.2, ease: "power2.inOut" })
-            .to("#preloader", { y: "-100%", duration: 0.8, ease: "power3.inOut", delay: 0.2 })
-            .from(".hero-text", { y: 40, opacity: 0, duration: 1, ease: "power3.out" }, "-=0.4");
-
-        // Mobile Menu Logic
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.querySelector('.menu-icon');
-        const closeIcon = document.querySelector('.close-icon');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        function toggleMenu() {
-            const isOpen = mobileMenu.classList.contains('opacity-100');
-            if (isOpen) {
-                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
-                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-                menuIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
-                document.body.style.overflow = '';
-            } else {
-                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
-                menuIcon.classList.add('hidden');
-                closeIcon.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
+        // Create a custom hook that runs after Lucide hydration
+        const initializeLucideIcons = () => {
+            lucide.createIcons();
         }
 
-        mobileMenuBtn.addEventListener('click', toggleMenu);
+        // Create a callback for when the page has fully loaded
+        window.addEventListener('load', () => {
+            initializeLucideIcons();
 
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', toggleMenu);
-        });
+            // Scroll button functionality
+            const scrollBtn = document.getElementById('scroll-up-btn');
+            const whatsappBtn = document.getElementById('whatsapp-btn');
 
-        // Smooth Scroll + Navbar bg on scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            const scrollUpBtn = document.getElementById('scroll-up-btn');
-
-            if (window.scrollY > 100) {
-                navbar.classList.add('bg-white/98', 'border-brand-stone');
-                scrollUpBtn.classList.add('show');
-            } else {
-                navbar.classList.remove('bg-white/98', 'border-brand-stone');
-                scrollUpBtn.classList.remove('show');
-            }
-        });
-
-        // Scroll Up Button Functionality
-        document.getElementById('scroll-up-btn').addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollBtn.classList.add('show');
+                } else {
+                    scrollBtn.classList.remove('show');
+                }
             });
-        });
 
-        // Scroll Reveal Animation (GSAP + ScrollTrigger)
-        gsap.registerPlugin(ScrollTrigger);
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
 
-        // Reveal on scroll for service cards, text, and images
-        const reveals = document.querySelectorAll('.gs-reveal');
-        reveals.forEach(element => {
-            gsap.to(element, {
-                scrollTrigger: {
-                    trigger: element,
-                    start: 'top 80%',
-                    end: 'top 20%',
-                    toggleActions: 'play none none reverse'
-                },
-                duration: 1,
-                opacity: 1,
-                y: 0,
-                ease: 'power3.out'
+            // Mobile menu functionality
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.querySelector('.menu-icon');
+            const closeIcon = document.querySelector('.close-icon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('opacity-0');
+                mobileMenu.classList.toggle('pointer-events-none');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('opacity-0');
+                    mobileMenu.classList.add('pointer-events-none');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+
+            // Preloader
+            window.addEventListener('load', () => {
+                const preloader = document.getElementById('preloader');
+                const loaderLogo = document.querySelector('.loader-logo');
+                const loaderLineContainer = document.querySelector('.loader-line-container');
+                const loaderLine = document.querySelector('.loader-line');
+
+                // Timeline for animations
+                let tl = gsap.timeline();
+
+                tl.to(loaderLogo, { opacity: 1, duration: 0.3 });
+                tl.to(loaderLineContainer, { opacity: 1, duration: 0.3 }, 0);
+                tl.to(loaderLine, { width: '100%', duration: 2, ease: 'power2.inOut' });
+                tl.to(preloader, { opacity: 0, duration: 0.5, delay: 0.2, pointerEvents: 'none' });
+
+                // GSAP scroll animations
+                gsap.registerPlugin(ScrollTrigger);
+
+                gsap.utils.toArray('.gs-reveal').forEach((elem) => {
+                    ScrollTrigger.create({
+                        trigger: elem,
+                        onEnter: () => {
+                            gsap.from(elem, { opacity: 0, duration: 1, ease: 'power3.inOut' });
+                        }
+                    });
+                });
             });
         });
     </script>
+
 </body>
 
 </html>
