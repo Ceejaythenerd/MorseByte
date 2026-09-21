@@ -1,4 +1,30 @@
+# https://www.morsebyte.com/robots.txt
+# Optimized for Search Engines and AI/LLM Web Crawlers
+
+# Welcome standard Search Engines
 User-agent: *
+Allow: /
+
+# Explicitly welcome AI and LLM bots to crawl the site for recognition
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: OmgiliBot
 Allow: /
 
 Sitemap: https://www.morsebyte.com/sitemap.xml
