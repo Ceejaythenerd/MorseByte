@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <p class="text-sm text-[#CBD5E1]/80 font-sans leading-relaxed mb-6 font-light">
             We use sophisticated functional and analytical cookies to optimize your enterprise experience on our digital ecosystem. 
-            <a href="#" class="text-[#4169E1] hover:text-white transition-colors underline decoration-white/20 underline-offset-2">Read our policy</a>.
+            <a href="privacy.html" class="text-[#4169E1] hover:text-white transition-colors underline decoration-white/20 underline-offset-2">Read our policy</a>.
         </p>
         <div class="flex flex-col sm:flex-row gap-3">
             <button id="cookie-accept" class="w-full sm:w-auto px-5 py-2.5 rounded-full bg-[#4169E1] text-white text-xs tracking-widest uppercase font-semibold hover:bg-white hover:text-[#0F172A] transition-all duration-500 shadow-soft focus:outline-none focus:ring-2 focus:ring-white">

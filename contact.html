@@ -32,6 +32,18 @@
     <!-- Canonical URL to prevent duplicate content issues -->
     <link rel="canonical" href="https://www.morsebyte.com/contact.html">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -305,8 +317,11 @@
                 <!-- Inner subtle gradient -->
                 <div class="absolute inset-0 bg-gradient-to-br from-brand-bg/50 to-transparent z-0"></div>
 
-                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="relative z-10 space-y-6">
+                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="relative z-10 space-y-6" id="contactForm">
                     <h3 class="font-serif text-3xl text-brand-forest mb-8">Initiate Dialogue</h3>
+
+                    <!-- Honeypot for spam protection -->
+                    <input type="text" name="_gotcha" style="display:none">
 
                     <div class="space-y-2">
                         <label class="text-[10px] tracking-widest uppercase font-bold text-brand-forest/70 pl-2">Full
@@ -400,13 +415,13 @@
                 <div>
                     <h4 class="font-serif text-lg text-brand-bg mb-6">Legal Framework</h4>
                     <ul class="space-y-4">
-                        <li><a href="#"
+                        <li><a href="privacy.html"
                                 class="text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300">Privacy
                                 Policy</a></li>
-                        <li><a href="#"
+                        <li><a href="terms.html"
                                 class="text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300">Terms
                                 of Service</a></li>
-                        <li><a href="#"
+                        <li><a href="ethics.html"
                                 class="text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300">Ethics
                                 & Assurance</a></li>
                     </ul>
@@ -517,6 +532,19 @@
                 }
             );
         });
+
+        // Form Validation
+        const contactForm = document.getElementById('contactForm');
+        if(contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                if(!contactForm.checkValidity()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    alert("Please fill in all required fields correctly.");
+                }
+                contactForm.classList.add('was-validated');
+            }, false);
+        }
     </script>
     <!-- Cookie Popup Script -->
     <script src="cookie-popup.js"></script>
