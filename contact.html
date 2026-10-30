@@ -35,17 +35,31 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact MorseByte",
+      "url": "https://www.morsebyte.com/contact.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "MorseByte",
+        "url": "https://www.morsebyte.com/",
+        "email": "info@morsebyte.co.za",
+        "telephone": "+27619885671",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "info@morsebyte.co.za",
+          "telephone": "+27619885671",
+          "availableLanguage": "en"
+        }
+      }
+    }
     </script>
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Google Fonts: Playfair Display and Source Sans 3 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,43 +75,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Source Sans 3"', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            bg: '#F8FAFC',           // Slate 50 (Cooler)
-                            forest: '#0F172A',       // Slate 900 (Dark Navy replacing dark green)
-                            sage: '#4169E1',         // Royal Blue (Requested)
-                            clay: '#E2E8F0',         // Slate 200 (Soft Blue Clay)
-                            stone: '#CBD5E1',        // Slate 300 (Border stone)
-                            terra: '#2563EB'         // Blue 600 (Interactive)
-                        }
-                    },
-                    boxShadow: {
-                        'soft': '0 4px 6px -1px rgba(15, 23, 42, 0.05)',
-                        'soft-md': '0 10px 15px -3px rgba(15, 23, 42, 0.05)',
-                        'soft-lg': '0 20px 40px -10px rgba(15, 23, 42, 0.05)',
-                        'inner-soft': 'inset 0 2px 4px 0 rgba(15, 23, 42, 0.03)',
-                    },
-                    transitionDuration: {
-                        '500': '500ms',
-                        '700': '700ms',
-                        '1000': '1000ms',
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
         body {
-            background-color: #F8FAFC;
+            background-color: #DFDDD6;
             color: #0F172A;
             font-family: 'Source Sans 3', sans-serif;
             -webkit-font-smoothing: antialiased;
@@ -159,7 +139,7 @@
     <div class="texture-overlay"></div>
 
     <!-- Navigation -->
-    <header class="fixed w-full top-0 z-50 transition-all duration-700" id="navbar">
+    <header class="fixed w-full top-0 z-50 transition-all duration-700 bg-brand-bg/95 backdrop-blur-md border-b border-brand-stone/40" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <!-- Logo -->
             <a href="index.html"
@@ -175,15 +155,15 @@
 
             <!-- Desktop Nav: Pill Container -->
             <nav
-                class="hidden md:flex items-center bg-white/70 backdrop-blur-md border border-brand-stone/60 rounded-full px-2 py-1.5 shadow-soft">
+                class="hidden md:flex items-center bg-brand-bg/70 backdrop-blur-md border border-brand-stone/60 rounded-full px-2 py-1.5 shadow-soft">
                 <a href="index.html#vision"
                     class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Vision</a>
-                <a href="index.html#services"
-                    class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Expertise</a>
+                <a href="index.html#health-check"
+                    class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Health Check</a>
+                <a href="ai-learning.html"
+                    class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">AI Learning</a>
                 <a href="about.html"
                     class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">About</a>
-                <a href="contact.html"
-                    class="text-xs tracking-widest uppercase font-semibold text-white bg-brand-sage px-5 py-2 rounded-full transition-all duration-300">Contact</a>
             </nav>
 
             <!-- Right Side -->
@@ -194,7 +174,7 @@
                     <i data-lucide="arrow-up-right"
                         class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"></i>
                 </a>
-                <button id="mobile-menu-btn"
+                <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu"
                     class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/70 backdrop-blur-md border border-brand-stone/60 text-brand-forest focus-ring relative z-[60]">
                     <i data-lucide="menu" class="w-5 h-5 menu-icon"></i>
                     <i data-lucide="x" class="w-5 h-5 close-icon hidden"></i>
@@ -214,24 +194,20 @@
                 <i data-lucide="arrow-up-right"
                     class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
             </a>
-            <a href="index.html#services"
+            <a href="index.html#health-check"
                 class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
                 <span
-                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">Expertise</span>
+                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">Health Check</span>
                 <i data-lucide="arrow-up-right"
                     class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
             </a>
-            <a href="about.html"
-                class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
-                <span
-                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">About
-                    Us</span>
-                <i data-lucide="arrow-up-right"
-                    class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
+            <a href="ai-learning.html" class="mobile-link group flex items-center justify-between py-5">
+                <span class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">AI Learning</span>
+                <i data-lucide="arrow-up-right" class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
             </a>
-            <a href="contact.html" class="mobile-link group flex items-center justify-between py-5">
-                <span class="text-3xl font-serif text-brand-sage">Contact</span>
-                <i data-lucide="arrow-up-right" class="w-5 h-5 text-brand-sage"></i>
+            <a href="about.html" class="mobile-link group flex items-center justify-between py-5">
+                <span class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">About</span>
+                <i data-lucide="arrow-up-right" class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
             </a>
         </nav>
         <div
@@ -270,7 +246,7 @@
                     <span class="italic text-brand-sage">Evolution.</span>
                 </h1>
                 <p class="font-sans text-lg md:text-xl text-brand-forest/80 leading-relaxed max-w-md mb-12 font-light">
-                    Reach out to our elite engineering and automation concierge. Let us architects your enterprise
+                    Reach out to our elite engineering and automation concierge. Let us architect your enterprise
                     infrastructure for scale.
                 </p>
 
@@ -317,38 +293,38 @@
                 <!-- Inner subtle gradient -->
                 <div class="absolute inset-0 bg-gradient-to-br from-brand-bg/50 to-transparent z-0"></div>
 
-                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="relative z-10 space-y-6" id="contactForm">
+                <form action="mailto:info@morsebyte.co.za" method="GET" class="relative z-10 space-y-6" id="contactForm">
                     <h3 class="font-serif text-3xl text-brand-forest mb-8">Initiate Dialogue</h3>
 
                     <!-- Honeypot for spam protection -->
                     <input type="text" name="_gotcha" style="display:none">
 
                     <div class="space-y-2">
-                        <label class="text-[10px] tracking-widest uppercase font-bold text-brand-forest/70 pl-2">Full
+                        <label for="contact-name" class="text-[10px] tracking-widest uppercase font-bold text-brand-forest/70 pl-2">Full
                             Identity</label>
-                        <input type="text" name="name" placeholder="Jane Doe" required
+                        <input id="contact-name" type="text" name="name" placeholder="Jane Doe" autocomplete="name" required
                             class="w-full bg-brand-bg/80 border border-brand-stone rounded-full px-6 py-4 outline-none focus:border-brand-sage focus:ring-1 focus:ring-brand-sage transition-all duration-300 text-brand-forest font-sans shadow-inner-soft">
                     </div>
 
                     <div class="space-y-2">
-                        <label class="text-[10px] tracking-widest uppercase font-bold text-brand-forest/70 pl-2">Secure
+                        <label for="contact-email" class="text-[10px] tracking-widest uppercase font-bold text-brand-forest/70 pl-2">Secure
                             Electronic Mail</label>
-                        <input type="email" name="email" placeholder="jane@enterprise.com" required
+                        <input id="contact-email" type="email" name="email" placeholder="jane@enterprise.com" autocomplete="email" required
                             class="w-full bg-brand-bg/80 border border-brand-stone rounded-full px-6 py-4 outline-none focus:border-brand-sage focus:ring-1 focus:ring-brand-sage transition-all duration-300 text-brand-forest font-sans shadow-inner-soft">
                     </div>
 
                     <div class="space-y-2">
-                        <label
+                        <label for="contact-company"
                             class="text-[10px] tracking-widest uppercase font-bold text-brand-forest/70 pl-2">Enterprise
                             Name</label>
-                        <input type="text" name="company" placeholder="Acme Corp"
+                        <input id="contact-company" type="text" name="company" placeholder="Acme Corp" autocomplete="organization"
                             class="w-full bg-brand-bg/80 border border-brand-stone rounded-full px-6 py-4 outline-none focus:border-brand-sage focus:ring-1 focus:ring-brand-sage transition-all duration-300 text-brand-forest font-sans shadow-inner-soft">
                     </div>
 
                     <div class="space-y-2">
-                        <label class="text-[10px] tracking-widest uppercase font-bold text-brand-forest/70 pl-2">Project
+                        <label for="contact-message" class="text-[10px] tracking-widest uppercase font-bold text-brand-forest/70 pl-2">Project
                             Scope / Inquiry</label>
-                        <textarea rows="4" name="message" placeholder="Detail your operational friction..." required
+                        <textarea id="contact-message" rows="4" name="message" placeholder="Detail your operational friction..." required
                             class="w-full bg-brand-bg/80 border border-brand-stone rounded-[2rem] px-6 py-4 outline-none focus:border-brand-sage focus:ring-1 focus:ring-brand-sage transition-all duration-300 text-brand-forest font-sans shadow-inner-soft resize-none"></textarea>
                     </div>
 
@@ -359,7 +335,7 @@
                             class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
                     </button>
                     <p class="text-center text-[10px] text-brand-forest/50 font-sans tracking-wide mt-4">By
-                        transmitting, you agree to our privacy protocols.</p>
+                        transmitting, you agree to our <a href="privacy.html" class="underline hover:text-brand-sage">privacy policy</a>.</p>
                 </form>
             </div>
         </div>
@@ -376,15 +352,13 @@
                     <p class="text-sm text-brand-bg/70 font-sans leading-relaxed pr-4">
                         We architect, deploy, and secure enterprise-grade digital ecosystems. Cultivate your legacy.
                     </p>
-                    <div class="flex space-x-4 pt-2">
-                        <a href="#"
-                            class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-brand-bg/60 hover:text-brand-forest hover:bg-brand-sage hover:border-brand-sage transition-all duration-300 group">
-                            <i data-lucide="linkedin" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-brand-bg/60 hover:text-brand-forest hover:bg-brand-sage hover:border-brand-sage transition-all duration-300 group">
-                            <i data-lucide="twitter" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
-                        </a>
+                    <div class="flex flex-wrap gap-3 pt-2" aria-label="Social media">
+                        <a href="https://www.tiktok.com/@morsebyte_" target="_blank" rel="noopener noreferrer"
+                            class="text-sm font-semibold text-brand-bg/70 hover:text-brand-sage transition-colors"
+                            aria-label="MorseByte on TikTok">TikTok</a>
+                        <a href="https://www.instagram.com/morsebyte/" target="_blank" rel="noopener noreferrer"
+                            class="text-sm font-semibold text-brand-bg/70 hover:text-brand-sage transition-colors"
+                            aria-label="MorseByte on Instagram">Instagram</a>
                     </div>
                 </div>
 
@@ -408,6 +382,13 @@
                                 class="flex items-center space-x-2 text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300 group"><span
                                     class="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-brand-sage transition-colors"></span><span>Vision</span></a>
                         </li>
+                        <li><a href="blog.html"
+                                class="flex items-center space-x-2 text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300 group"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-brand-sage transition-colors"></span><span>Insights</span></a>
+                        </li>
+                        <li><a href="ai-learning.html"
+                                class="flex items-center space-x-2 text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300 group"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-brand-sage transition-colors"></span><span>AI Learning</span></a></li>
                     </ul>
                 </div>
 
@@ -488,12 +469,14 @@
                 menuIcon.classList.remove('hidden');
                 closeIcon.classList.add('hidden');
                 document.body.style.overflow = '';
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
             } else {
                 mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
                 mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
                 menuIcon.classList.add('hidden');
                 closeIcon.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
+                mobileMenuBtn.setAttribute('aria-expanded', 'true');
             }
         }
 
@@ -533,7 +516,7 @@
             );
         });
 
-        // Form Validation
+        // Form validation and email fallback
         const contactForm = document.getElementById('contactForm');
         if(contactForm) {
             contactForm.addEventListener('submit', function(e) {
@@ -541,8 +524,15 @@
                     e.preventDefault();
                     e.stopPropagation();
                     alert("Please fill in all required fields correctly.");
+                    return;
                 }
-                contactForm.classList.add('was-validated');
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const subject = encodeURIComponent(`MorseByte enquiry from ${formData.get('name')}`);
+                const body = encodeURIComponent(
+                    `Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\nCompany: ${formData.get('company') || 'Not provided'}\n\n${formData.get('message')}`
+                );
+                window.location.href = `mailto:info@morsebyte.co.za?subject=${subject}&body=${body}`;
             }, false);
         }
     </script>

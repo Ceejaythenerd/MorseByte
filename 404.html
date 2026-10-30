@@ -11,17 +11,8 @@
     <link rel="canonical" href="https://www.morsebyte.com/404.html">
     <link rel="icon" type="image/png" href="logo.png">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,32 +24,9 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Source Sans 3"', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            bg: '#F8FAFC',
-                            forest: '#0F172A',
-                            sage: '#4169E1',
-                            clay: '#E2E8F0',
-                            stone: '#CBD5E1',
-                            terra: '#2563EB'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
         body {
-            background-color: #F9F8F4;
+            background-color: #DFDDD6;
             color: #2D3A31;
             font-family: 'Source Sans 3', sans-serif;
             -webkit-font-smoothing: antialiased;
@@ -71,16 +39,18 @@
 
 <body class="antialiased flex flex-col min-h-screen">
 
-    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-stone/40" id="navbar">
+    <header class="fixed w-full top-0 z-50 bg-brand-bg/95 backdrop-blur-md border-b border-brand-stone/40" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-3 cursor-pointer group focus-ring rounded-sm">
                 <img src="logo.png" alt="MorseByte" class="h-9 object-contain opacity-90 group-hover:opacity-100 transition-opacity">
             </a>
-            <nav class="hidden md:flex items-center space-x-6">
-                <a href="index.html" class="text-xs uppercase font-semibold text-brand-forest/70 hover:text-brand-forest transition-colors">Home</a>
-                <a href="about.html" class="text-xs uppercase font-semibold text-brand-forest/70 hover:text-brand-forest transition-colors">About Us</a>
-                <a href="contact.html" class="text-xs uppercase font-semibold text-brand-forest/70 hover:text-brand-forest transition-colors">Contact</a>
+            <nav class="hidden md:flex items-center bg-brand-bg/70 backdrop-blur-md border border-brand-stone/60 rounded-full px-2 py-1.5 shadow-soft" aria-label="Primary navigation">
+                <a href="index.html#vision" class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Vision</a>
+                <a href="index.html#health-check" class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Health Check</a>
+                <a href="ai-learning.html" class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">AI Learning</a>
+                <a href="about.html" class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">About</a>
             </nav>
+            <a href="contact.html" class="hidden md:inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-brand-forest text-white text-xs tracking-widest uppercase font-semibold hover:bg-brand-sage transition-colors duration-300">Partner Up</a>
         </div>
     </header>
 
@@ -104,6 +74,8 @@
             <div class="flex space-x-6 mb-8 text-sm font-sans">
                 <a href="privacy.html" class="text-brand-bg/70 hover:text-brand-sage transition-colors">Privacy Policy</a>
                 <a href="terms.html" class="text-brand-bg/70 hover:text-brand-sage transition-colors">Terms of Service</a>
+                <a href="ethics.html" class="text-brand-bg/70 hover:text-brand-sage transition-colors">Ethics & Assurance</a>
+                <a href="ai-learning.html" class="text-brand-bg/70 hover:text-brand-sage transition-colors">AI Learning</a>
             </div>
             <p class="text-xs text-brand-bg/50 font-sans">&copy; 2026 MorseByte. All rights reserved.</p>
         </div>

@@ -1,0 +1,49 @@
+# MorseByte
+
+> MorseByte is a South Africa-based technology services company helping small and medium-sized businesses design, automate, secure, and scale their digital operations.
+
+## What MorseByte does
+
+- AI automation: identify repeatable work, design practical AI workflows, and introduce responsible automation.
+- Software delivery: plan, build, improve, and maintain business software.
+- Cloud architecture: design scalable cloud infrastructure and improve reliability and cost control.
+- DevOps: implement CI/CD, infrastructure as code, container orchestration, and delivery automation.
+- Cybersecurity: perform security reviews, develop Zero-Trust strategies, and support proactive risk reduction.
+- DevSecOps: integrate security testing, vulnerability scanning, and compliance checks into delivery pipelines.
+- Technical direction: provide a focused starting point for organizations that need help prioritizing technology work.
+
+## Public tools
+
+- Technology Health Check: https://www.morsebyte.com/#health-check
+- AI Learning Hub: https://www.morsebyte.com/ai-learning.html
+- Insights and information: https://www.morsebyte.com/blog.html
+- Service matcher: https://www.morsebyte.com/#start-project
+
+## API and x402 services
+
+- API base domain: https://api.morsebyte.co.za/
+- API service discovery: https://api.morsebyte.co.za/llms.txt
+- API crawler policy: https://api.morsebyte.co.za/robots.txt
+- x402 services are machine-to-machine services exposed through the MorseByte API domain and may require x402 payment authorization.
+- Consult the API domain's current documentation for available endpoints, request schemas, pricing, payment requirements, rate limits, and terms. Do not infer undocumented endpoints or send requests without the required authorization.
+
+## Contact
+
+- Website: https://www.morsebyte.com/
+- Email: mailto:info@morsebyte.co.za
+- Phone: +27 61 988 5671
+- WhatsApp: https://wa.me/27619885671
+- Headquarters: 7th Floor, Radisson Blu Hotel, Sandton Isle, 126 Rivonia Road, Sandton, 2196, South Africa
+
+## Official pages
+
+- About: https://www.morsebyte.com/about.html
+- Contact: https://www.morsebyte.com/contact.html
+- Ethics and Assurance: https://www.morsebyte.com/ethics.html
+- Privacy Policy: https://www.morsebyte.com/privacy.html
+- Terms of Service: https://www.morsebyte.com/terms.html
+
+## Official profiles
+
+- Instagram: https://www.instagram.com/morsebyte/
+- TikTok: https://www.tiktok.com/@morsebyte_

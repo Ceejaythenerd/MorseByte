@@ -28,3 +28,7 @@ User-agent: OmgiliBot
 Allow: /
 
 Sitemap: https://www.morsebyte.com/sitemap.xml
+
+# The x402 API is hosted on a separate origin. Its crawler policy must also
+# be published at https://api.morsebyte.co.za/robots.txt.
+# API discovery: https://api.morsebyte.co.za/llms.txt

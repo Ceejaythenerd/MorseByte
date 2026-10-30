@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </button>
         </div>
         <p class="text-sm text-[#CBD5E1]/80 font-sans leading-relaxed mb-6 font-light">
-            We use sophisticated functional and analytical cookies to optimize your enterprise experience on our digital ecosystem. 
+            We use essential cookies to remember your privacy preference. Optional analytics will remain disabled until you explicitly opt in.
             <a href="privacy.html" class="text-[#4169E1] hover:text-white transition-colors underline decoration-white/20 underline-offset-2">Read our policy</a>.
         </p>
         <div class="flex flex-col sm:flex-row gap-3">

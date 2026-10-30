@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MorseByte | TechServices Solutions</title>
+    <title>MorseByte | Enterprise Technology Services</title>
 
     <!-- Search Engine Optimization Meta Tags -->
     <meta name="description"
@@ -17,7 +17,7 @@
     <!-- Open Graph / Web / Social (Facebook, LinkedIn, etc.) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.morsebyte.com/">
-    <meta property="og:title" content="MorseByte | Enterprise AI & TechServices Solutions">
+    <meta property="og:title" content="MorseByte | Enterprise Technology Services">
     <meta property="og:description"
         content="Premium technology services firm dedicated to architecting, deploying, and securing enterprise-grade digital ecosystems for SMEs.">
     <meta property="og:image" content="https://www.morsebyte.com/logo.png">
@@ -25,13 +25,17 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.morsebyte.com/">
-    <meta name="twitter:title" content="MorseByte | Enterprise AI & TechServices Solutions">
+    <meta name="twitter:title" content="MorseByte | Enterprise Technology Services">
     <meta name="twitter:description"
         content="Architecting, deploying, and securing enterprise-grade digital ecosystems for growing SMEs via AI automation.">
     <meta name="twitter:image" content="https://www.morsebyte.com/logo.png">
 
     <!-- Canonical URL to prevent duplicate content issues -->
     <link rel="canonical" href="https://www.morsebyte.com/">
+    <link rel="alternate" type="text/plain" href="https://www.morsebyte.com/llms.txt"
+        title="MorseByte AI-readable information">
+    <link rel="alternate" type="text/plain" href="https://api.morsebyte.co.za/llms.txt"
+        title="MorseByte x402 API AI-readable information">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
@@ -40,7 +44,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ITUtility",
+      "@type": "ProfessionalService",
       "name": "MorseByte",
       "url": "https://www.morsebyte.com/",
       "logo": "https://www.morsebyte.com/logo.png",
@@ -56,8 +60,8 @@
         "email": "info@morsebyte.co.za"
       },
       "sameAs": [
-        "https://twitter.com/morsebyte",
-        "https://www.linkedin.com/company/morsebyte"
+        "https://www.tiktok.com/@morsebyte_",
+        "https://www.instagram.com/morsebyte/"
       ],
       "knowsAbout": [
         "Enterprise AI",
@@ -69,17 +73,58 @@
     }
     </script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.morsebyte.com/#website",
+          "url": "https://www.morsebyte.com/",
+          "name": "MorseByte",
+          "description": "Technology services for SMEs covering AI automation, software delivery, cloud architecture, DevOps, cybersecurity, and DevSecOps.",
+          "publisher": {"@id": "https://www.morsebyte.com/#organization"}
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.morsebyte.com/#organization",
+          "name": "MorseByte",
+          "url": "https://www.morsebyte.com/",
+          "email": "info@morsebyte.co.za",
+          "telephone": "+27619885671",
+          "areaServed": "ZA",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "MorseByte API and x402 services",
+            "url": "https://api.morsebyte.co.za/"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "7th Floor, Radisson Blu Hotel, Sandton Isle, 126 Rivonia Road",
+            "addressLocality": "Sandton",
+            "postalCode": "2196",
+            "addressCountry": "ZA"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://www.morsebyte.com/#services",
+          "name": "MorseByte technology services",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "AI Automation", "url": "https://www.morsebyte.com/#services"},
+            {"@type": "ListItem", "position": 2, "name": "Software Delivery", "url": "https://www.morsebyte.com/#services"},
+            {"@type": "ListItem", "position": 3, "name": "Cloud Architecture", "url": "https://www.morsebyte.com/#services"},
+            {"@type": "ListItem", "position": 4, "name": "DevOps", "url": "https://www.morsebyte.com/#services"},
+            {"@type": "ListItem", "position": 5, "name": "Cybersecurity", "url": "https://www.morsebyte.com/#services"},
+            {"@type": "ListItem", "position": 6, "name": "DevSecOps", "url": "https://www.morsebyte.com/#services"}
+          ]
+        }
+      ]
+    }
     </script>
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Google Fonts: Playfair Display and Source Sans 3 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,42 +140,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Source Sans 3"', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            bg: '#F8FAFC',
-                            forest: '#0F172A',
-                            sage: '#4169E1',
-                            clay: '#E2E8F0',
-                            stone: '#CBD5E1',
-                            terra: '#2563EB'
-                        }
-                    },
-                    boxShadow: {
-                        'soft': '0 4px 6px -1px rgba(45, 58, 49, 0.05)',
-                        'soft-md': '0 10px 15px -3px rgba(45, 58, 49, 0.05)',
-                        'soft-lg': '0 20px 40px -10px rgba(45, 58, 49, 0.05)',
-                    },
-                    transitionDuration: {
-                        '500': '500ms',
-                        '700': '700ms',
-                        '1000': '1000ms',
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
         body {
-            background-color: #F9F8F4;
+            background-color: #DFDDD6;
             color: #2D3A31;
             font-family: 'Source Sans 3', sans-serif;
             -webkit-font-smoothing: antialiased;
@@ -202,11 +214,19 @@
         .animate-scroll {
             display: flex;
             width: max-content;
-            animation: scroll 30s linear infinite;
+            flex-shrink: 0;
+            animation: scroll 32s linear infinite;
+            will-change: transform;
         }
 
         .animate-scroll:hover {
             animation-play-state: paused;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-scroll {
+                animation: none;
+            }
         }
 
         #preloader {
@@ -218,6 +238,13 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            transition: opacity 500ms ease, visibility 500ms ease;
+        }
+
+        #preloader.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
         }
 
         .loader-logo {
@@ -225,6 +252,7 @@
             height: auto;
             opacity: 0;
             filter: invert(1) brightness(2);
+            animation: loader-logo-in 700ms ease-out 150ms forwards;
         }
 
         .loader-line-container {
@@ -235,6 +263,7 @@
             position: relative;
             overflow: hidden;
             opacity: 0;
+            animation: loader-line-in 300ms ease-out 250ms forwards;
         }
 
         .loader-line {
@@ -244,21 +273,50 @@
             height: 100%;
             width: 0%;
             background-color: #4169E1;
+            animation: loader-progress 1.8s ease-in-out 350ms forwards;
+        }
+
+        @keyframes loader-logo-in {
+            from {
+                opacity: 0;
+                transform: translateY(8px) scale(0.96);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes loader-line-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes loader-progress {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
         }
 
         #scroll-up-btn {
             position: fixed;
             bottom: 2rem;
-            right: 5.5rem;
+            right: 5.75rem;
             z-index: 40;
             opacity: 0;
             pointer-events: none;
+            transform: translateY(12px);
             transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
         }
 
         #scroll-up-btn.show {
             opacity: 1;
             pointer-events: auto;
+            transform: translateY(0);
         }
 
         #scroll-up-btn:hover {
@@ -269,7 +327,7 @@
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            z-index: 40;
+            z-index: 41;
         }
 
         .whatsapp-icon {
@@ -291,6 +349,57 @@
         .whatsapp-icon:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        #navbar {
+            transition: padding 400ms ease, background-color 400ms ease, box-shadow 400ms ease;
+        }
+
+        #navbar.is-scrolled {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            background-color: transparent;
+            border-bottom-color: transparent;
+        }
+
+        #navbar.is-scrolled > div {
+            border: 1px solid rgba(220, 207, 194, 0.7);
+            border-radius: 9999px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 12px 30px rgba(45, 58, 49, 0.12);
+            backdrop-filter: blur(14px);
+        }
+
+        @media (max-width: 640px) {
+            #scroll-up-btn {
+                right: 5rem;
+                bottom: 1.25rem;
+            }
+
+            #whatsapp-btn {
+                right: 1.25rem;
+                bottom: 1.25rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #preloader,
+            #navbar,
+            #scroll-up-btn,
+            .whatsapp-icon {
+                transition: none;
+            }
+
+            .loader-logo,
+            .loader-line-container,
+            .loader-line {
+                animation: none;
+                opacity: 1;
+            }
+
+            .loader-line {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -323,7 +432,7 @@
     </a>
 
     <header
-        class="fixed w-full top-0 z-50 transition-all duration-700 bg-white/95 backdrop-blur-md border-b border-brand-stone/40"
+        class="fixed w-full top-0 z-50 transition-all duration-700 bg-brand-bg/95 backdrop-blur-md border-b border-brand-stone/40"
         id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
 
@@ -339,15 +448,15 @@
             </a>
 
             <nav
-                class="hidden md:flex items-center bg-white/70 backdrop-blur-md border border-brand-stone/60 rounded-full px-2 py-1.5 shadow-soft">
+                class="hidden md:flex items-center bg-brand-bg/70 backdrop-blur-md border border-brand-stone/60 rounded-full px-2 py-1.5 shadow-soft">
                 <a href="#vision"
                     class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Vision</a>
-                <a href="#services"
-                    class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Expertise</a>
+                <a href="#health-check"
+                    class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Health Check</a>
+                <a href="ai-learning.html"
+                    class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">AI Learning</a>
                 <a href="about.html"
                     class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">About</a>
-                <a href="contact.html"
-                    class="text-xs tracking-widest uppercase font-semibold text-brand-forest/70 hover:text-brand-forest hover:bg-brand-clay px-5 py-2 rounded-full transition-all duration-300">Contact</a>
             </nav>
 
             <div class="flex items-center space-x-4">
@@ -358,7 +467,7 @@
                     <i data-lucide="arrow-up-right"
                         class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"></i>
                 </a>
-                <button id="mobile-menu-btn"
+                <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu"
                     class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/70 backdrop-blur-md border border-brand-stone/60 text-brand-forest focus-ring relative z-[60]"
                     aria-label="Toggle mobile menu">
                     <i data-lucide="menu" class="w-5 h-5 menu-icon"></i>
@@ -378,23 +487,24 @@
                 <i data-lucide="arrow-up-right"
                     class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
             </a>
-            <a href="#services"
+            <a href="#health-check"
                 class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
                 <span
-                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">Expertise</span>
+                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">Health Check</span>
+                <i data-lucide="arrow-up-right"
+                    class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
+            </a>
+            <a href="ai-learning.html"
+                class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
+                <span
+                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">AI Learning</span>
                 <i data-lucide="arrow-up-right"
                     class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
             </a>
             <a href="about.html"
                 class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
                 <span
-                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">About Us</span>
-                <i data-lucide="arrow-up-right"
-                    class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
-            </a>
-            <a href="contact.html" class="mobile-link group flex items-center justify-between py-5">
-                <span
-                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">Contact</span>
+                    class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">About</span>
                 <i data-lucide="arrow-up-right"
                     class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
             </a>
@@ -537,7 +647,7 @@
                                         <div
                                             class="bg-[#1A2421] rounded-2xl p-2 shadow-inner border border-white/5 mt-auto">
                                             <div class="relative w-full h-24 rounded-xl overflow-hidden mb-2">
-                                                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop"
+                                                <img src="https://images.unsplash.com/photo-1669023414162-8b0573b9c6b2?auto=format&fit=crop&w=600&q=80"
                                                     class="w-full h-full object-cover mix-blend-screen opacity-40 grayscale"
                                                     alt="Server">
                                             </div>
@@ -579,8 +689,8 @@
                 class="absolute left-0 top-0 bottom-0 w-16 md:w-48 bg-gradient-to-r from-brand-bg to-transparent z-10 pointer-events-none">
             </div>
 
-            <div class="animate-scroll transition-opacity duration-300 opacity-100 flex-nowrap">
-                <div class="flex items-center space-x-12 md:space-x-24 px-6 md:px-12 flex-shrink-0">
+            <div class="animate-scroll flex-nowrap" aria-label="MorseByte client logos">
+                <div class="flex items-center space-x-12 md:space-x-24 px-6 md:px-12 flex-shrink-0" aria-hidden="true">
                     <div class="flex items-center justify-center flex-shrink-0 hover:scale-105 transition-transform duration-300">
                         <img src="clients/Buy%20Me%20A%20Kota.jpg" alt="Buy Me A Kota"
                             class="h-12 md:h-16 w-auto object-contain rounded-md mix-blend-multiply">
@@ -861,6 +971,219 @@
         </div>
     </section>
 
+    <section class="py-32 px-6 bg-[#F2F0EB] border-y border-brand-stone" id="start-project">
+        <div class="max-w-6xl mx-auto">
+            <div class="max-w-3xl mb-12">
+                <p class="text-brand-sage font-sans text-sm tracking-[0.2em] uppercase mb-6">Find your starting point</p>
+                <h2 class="text-4xl md:text-5xl text-brand-forest mb-6">What would you like to improve?</h2>
+                <p class="text-lg text-brand-forest/70 font-sans font-light">Choose the challenge closest to your business. Weâ€™ll show you the best first engagement and what it can deliver.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="service-matcher-options">
+                <button type="button" data-service="automation" class="service-matcher-option text-left bg-white rounded-2xl border border-brand-stone p-6 hover:border-brand-sage hover:shadow-soft-md transition-all">
+                    <span class="text-brand-sage text-sm uppercase tracking-widest font-semibold">AI Automation</span>
+                    <span class="block font-serif text-2xl text-brand-forest mt-3 mb-2">Too much manual work?</span>
+                    <span class="block text-sm text-brand-forest/65">Find repeatable workflows AI can assist or automate.</span>
+                </button>
+                <button type="button" data-service="security" class="service-matcher-option text-left bg-white rounded-2xl border border-brand-stone p-6 hover:border-brand-sage hover:shadow-soft-md transition-all">
+                    <span class="text-brand-sage text-sm uppercase tracking-widest font-semibold">Cybersecurity</span>
+                    <span class="block font-serif text-2xl text-brand-forest mt-3 mb-2">Worried about risk?</span>
+                    <span class="block text-sm text-brand-forest/65">Strengthen access, resilience, and incident readiness.</span>
+                </button>
+                <button type="button" data-service="cloud" class="service-matcher-option text-left bg-white rounded-2xl border border-brand-stone p-6 hover:border-brand-sage hover:shadow-soft-md transition-all">
+                    <span class="text-brand-sage text-sm uppercase tracking-widest font-semibold">Cloud & DevOps</span>
+                    <span class="block font-serif text-2xl text-brand-forest mt-3 mb-2">Struggling to scale?</span>
+                    <span class="block text-sm text-brand-forest/65">Improve reliability, delivery speed, and infrastructure cost.</span>
+                </button>
+                <button type="button" data-service="software" class="service-matcher-option text-left bg-white rounded-2xl border border-brand-stone p-6 hover:border-brand-sage hover:shadow-soft-md transition-all">
+                    <span class="text-brand-sage text-sm uppercase tracking-widest font-semibold">Software Delivery</span>
+                    <span class="block font-serif text-2xl text-brand-forest mt-3 mb-2">Need a better product?</span>
+                    <span class="block text-sm text-brand-forest/65">Turn an idea or legacy system into a dependable digital experience.</span>
+                </button>
+                <button type="button" data-service="direction" class="service-matcher-option text-left bg-white rounded-2xl border border-brand-stone p-6 hover:border-brand-sage hover:shadow-soft-md transition-all">
+                    <span class="text-brand-sage text-sm uppercase tracking-widest font-semibold">Technical Direction</span>
+                    <span class="block font-serif text-2xl text-brand-forest mt-3 mb-2">Not sure where to start?</span>
+                    <span class="block text-sm text-brand-forest/65">Get a focused view of priorities, risks, and the next sensible step.</span>
+                </button>
+            </div>
+            <div id="service-matcher-result" class="hidden mt-8 bg-brand-forest rounded-[2rem] p-8 md:p-10 text-white" aria-live="polite">
+                <p class="text-brand-sage text-sm uppercase tracking-widest font-semibold mb-4">Recommended first engagement</p>
+                <h3 id="service-matcher-title" class="text-3xl md:text-4xl mb-4"></h3>
+                <p id="service-matcher-description" class="text-brand-bg/75 max-w-2xl leading-relaxed"></p>
+                <a id="service-matcher-contact" href="contact.html" class="inline-flex items-center gap-2 mt-8 rounded-full bg-brand-sage px-6 py-3 text-sm font-semibold hover:bg-white hover:text-brand-forest transition-colors">Discuss this with MorseByte <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 bg-brand-forest text-brand-bg" id="health-check">
+        <div class="max-w-6xl mx-auto">
+            <div class="max-w-3xl mb-12">
+                <p class="text-brand-sage font-sans text-sm tracking-[0.2em] uppercase mb-6">Free diagnostic</p>
+                <h2 class="text-4xl md:text-5xl text-white mb-6">How ready is your business for its next stage?</h2>
+                <p class="text-lg text-brand-bg/70 font-sans font-light">
+                    Answer six questions to get an instant technology readiness score and a practical first priority.
+                    Your answers stay in this browser and are never submitted.
+                </p>
+            </div>
+
+            <form id="health-check-form" class="grid grid-cols-1 md:grid-cols-2 gap-6" novalidate>
+                <fieldset class="rounded-2xl border border-white/15 bg-white/5 p-6">
+                    <legend class="font-serif text-xl text-white mb-4">1. How connected are your core systems?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="systems" value="0" required class="mt-1 accent-brand-sage"> Mostly disconnected or manual</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="systems" value="1" class="mt-1 accent-brand-sage"> Some integrations, but gaps remain</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75"><input type="radio" name="systems" value="2" class="mt-1 accent-brand-sage"> Well integrated and visible</label>
+                </fieldset>
+                <fieldset class="rounded-2xl border border-white/15 bg-white/5 p-6">
+                    <legend class="font-serif text-xl text-white mb-4">2. How much work is still repetitive?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="automation" value="0" required class="mt-1 accent-brand-sage"> A significant amount</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="automation" value="1" class="mt-1 accent-brand-sage"> A few known bottlenecks</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75"><input type="radio" name="automation" value="2" class="mt-1 accent-brand-sage"> Most workflows are automated</label>
+                </fieldset>
+                <fieldset class="rounded-2xl border border-white/15 bg-white/5 p-6">
+                    <legend class="font-serif text-xl text-white mb-4">3. How confident are you in your security controls?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="security" value="0" required class="mt-1 accent-brand-sage"> We need a clear baseline</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="security" value="1" class="mt-1 accent-brand-sage"> Basic controls are in place</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75"><input type="radio" name="security" value="2" class="mt-1 accent-brand-sage"> Controls are tested and monitored</label>
+                </fieldset>
+                <fieldset class="rounded-2xl border border-white/15 bg-white/5 p-6">
+                    <legend class="font-serif text-xl text-white mb-4">4. Can your infrastructure handle growth?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="infrastructure" value="0" required class="mt-1 accent-brand-sage"> Growth regularly causes problems</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="infrastructure" value="1" class="mt-1 accent-brand-sage"> We can scale with preparation</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75"><input type="radio" name="infrastructure" value="2" class="mt-1 accent-brand-sage"> Capacity and costs are predictable</label>
+                </fieldset>
+                <fieldset class="rounded-2xl border border-white/15 bg-white/5 p-6">
+                    <legend class="font-serif text-xl text-white mb-4">5. How are you using AI today?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="ai" value="0" required class="mt-1 accent-brand-sage"> We have not started</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="ai" value="1" class="mt-1 accent-brand-sage"> Individuals use tools informally</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75"><input type="radio" name="ai" value="2" class="mt-1 accent-brand-sage"> AI is governed and embedded in workflows</label>
+                </fieldset>
+                <fieldset class="rounded-2xl border border-white/15 bg-white/5 p-6">
+                    <legend class="font-serif text-xl text-white mb-4">6. How clearly do you know your technology priorities?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="roadmap" value="0" required class="mt-1 accent-brand-sage"> We need help defining them</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75 mb-3"><input type="radio" name="roadmap" value="1" class="mt-1 accent-brand-sage"> We have priorities but lack capacity</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-bg/75"><input type="radio" name="roadmap" value="2" class="mt-1 accent-brand-sage"> We have a measurable roadmap</label>
+                </fieldset>
+                <div class="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                    <button type="submit" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-sage text-white text-sm tracking-widest uppercase font-semibold hover:bg-white hover:text-brand-forest transition-colors">
+                        Show my results <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                    <p id="health-check-error" class="hidden text-sm text-red-200" role="alert">Please answer all six questions.</p>
+                </div>
+            </form>
+
+            <div id="health-check-result" class="hidden mt-12 rounded-[2rem] bg-white p-8 md:p-12 text-brand-forest" aria-live="polite">
+                <p class="text-brand-sage font-sans text-sm tracking-[0.2em] uppercase mb-4">Your result</p>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+                    <div>
+                        <h3 id="health-check-title" class="text-3xl md:text-4xl mb-3"></h3>
+                        <p id="health-check-summary" class="text-brand-forest/70 max-w-2xl"></p>
+                    </div>
+                    <div class="text-5xl font-serif text-brand-sage"><span id="health-check-score"></span><span class="text-2xl">/12</span></div>
+                </div>
+                <div class="border-t border-brand-stone pt-6">
+                    <p class="text-xs uppercase tracking-widest text-brand-forest/60 font-bold mb-2">Recommended first priority</p>
+                    <p id="health-check-priority" class="text-lg"></p>
+                </div>
+                <a href="contact.html" class="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-brand-sage hover:text-brand-forest transition-colors">
+                    Discuss your result with MorseByte <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+                <div id="health-check-follow-up" class="hidden mt-8 pt-8 border-t border-brand-stone">
+                    <p class="text-sm text-brand-forest/70 mb-4">Want a tailored follow-up? Add your email or message us on WhatsApp.</p>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <label for="health-check-email" class="sr-only">Your email address</label>
+                        <input id="health-check-email" type="email" placeholder="you@company.com" autocomplete="email"
+                            class="min-w-0 flex-1 rounded-full border border-brand-stone px-5 py-3 text-sm text-brand-forest outline-none focus:border-brand-sage focus:ring-1 focus:ring-brand-sage">
+                        <button id="health-check-email-btn" type="button"
+                            class="inline-flex items-center justify-center gap-2 rounded-full bg-brand-forest px-5 py-3 text-sm font-semibold text-white hover:bg-brand-sage transition-colors">
+                            Email my result <i data-lucide="mail" class="w-4 h-4"></i>
+                        </button>
+                        <a id="health-check-whatsapp" href="https://wa.me/27619885671" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center gap-2 rounded-full border border-brand-forest px-5 py-3 text-sm font-semibold text-brand-forest hover:bg-brand-forest hover:text-white transition-colors">
+                            WhatsApp us <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    <p id="health-check-lead-status" class="hidden mt-3 text-sm text-brand-sage" role="status"></p>
+                    <p class="mt-3 text-xs text-brand-forest/50">Your email is only placed into your mail app. Nothing is stored on this site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 bg-brand-bg border-y border-brand-stone" id="security-check">
+        <div class="max-w-6xl mx-auto">
+            <div class="max-w-3xl mb-12">
+                <p class="text-brand-sage font-sans text-sm tracking-[0.2em] uppercase mb-6">Free diagnostic</p>
+                <h2 class="text-4xl md:text-5xl text-brand-forest mb-6">Find your biggest security gap.</h2>
+                <p class="text-lg text-brand-forest/70 font-sans font-light">
+                    Use this quick check to identify where your business may need attention. It is an educational guide,
+                    not a formal security audit, and your answers remain in this browser.
+                </p>
+            </div>
+
+            <form id="security-check-form" class="grid grid-cols-1 md:grid-cols-2 gap-6" novalidate>
+                <fieldset class="rounded-2xl border border-brand-stone bg-white p-6">
+                    <legend class="font-serif text-xl text-brand-forest mb-4">1. Is multi-factor authentication enabled?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="mfa" value="2" required class="mt-1 accent-brand-sage"> For all important accounts</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="mfa" value="1" class="mt-1 accent-brand-sage"> For some accounts</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75"><input type="radio" name="mfa" value="0" class="mt-1 accent-brand-sage"> Not yet or unsure</label>
+                </fieldset>
+                <fieldset class="rounded-2xl border border-brand-stone bg-white p-6">
+                    <legend class="font-serif text-xl text-brand-forest mb-4">2. How often are backups tested?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="backups" value="2" required class="mt-1 accent-brand-sage"> Regularly, with recovery tests</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="backups" value="1" class="mt-1 accent-brand-sage"> Backups exist but are rarely tested</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75"><input type="radio" name="backups" value="0" class="mt-1 accent-brand-sage"> We are unsure or do not have them</label>
+                </fieldset>
+                <fieldset class="rounded-2xl border border-brand-stone bg-white p-6">
+                    <legend class="font-serif text-xl text-brand-forest mb-4">3. Do you know who can access sensitive data?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="access" value="2" required class="mt-1 accent-brand-sage"> Access is reviewed and limited</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="access" value="1" class="mt-1 accent-brand-sage"> We have some controls</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75"><input type="radio" name="access" value="0" class="mt-1 accent-brand-sage"> We are unsure</label>
+                </fieldset>
+                <fieldset class="rounded-2xl border border-brand-stone bg-white p-6">
+                    <legend class="font-serif text-xl text-brand-forest mb-4">4. How do you handle software updates?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="updates" value="2" required class="mt-1 accent-brand-sage"> Updates are tracked and applied promptly</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="updates" value="1" class="mt-1 accent-brand-sage"> We update when issues arise</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75"><input type="radio" name="updates" value="0" class="mt-1 accent-brand-sage"> There is no consistent process</label>
+                </fieldset>
+                <fieldset class="rounded-2xl border border-brand-stone bg-white p-6">
+                    <legend class="font-serif text-xl text-brand-forest mb-4">5. Would your team recognize a phishing attempt?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="awareness" value="2" required class="mt-1 accent-brand-sage"> We train and test regularly</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="awareness" value="1" class="mt-1 accent-brand-sage"> We have discussed it informally</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75"><input type="radio" name="awareness" value="0" class="mt-1 accent-brand-sage"> We have no formal awareness program</label>
+                </fieldset>
+                <fieldset class="rounded-2xl border border-brand-stone bg-white p-6">
+                    <legend class="font-serif text-xl text-brand-forest mb-4">6. Do you have an incident response plan?</legend>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="response" value="2" required class="mt-1 accent-brand-sage"> Documented and rehearsed</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75 mb-3"><input type="radio" name="response" value="1" class="mt-1 accent-brand-sage"> Key people know what to do</label>
+                    <label class="flex gap-3 items-start text-sm text-brand-forest/75"><input type="radio" name="response" value="0" class="mt-1 accent-brand-sage"> No plan or unsure</label>
+                </fieldset>
+                <div class="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                    <button type="submit" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-forest text-white text-sm tracking-widest uppercase font-semibold hover:bg-brand-sage transition-colors">
+                        Show security result <i data-lucide="shield-check" class="w-4 h-4"></i>
+                    </button>
+                    <p id="security-check-error" class="hidden text-sm text-red-600" role="alert">Please answer all six questions.</p>
+                </div>
+            </form>
+
+            <div id="security-check-result" class="hidden mt-12 rounded-[2rem] bg-brand-forest p-8 md:p-12 text-white" aria-live="polite">
+                <p class="text-brand-sage font-sans text-sm tracking-[0.2em] uppercase mb-4">Your security result</p>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+                    <div>
+                        <h3 id="security-check-title" class="text-3xl md:text-4xl mb-3"></h3>
+                        <p id="security-check-summary" class="text-brand-bg/70 max-w-2xl"></p>
+                    </div>
+                    <div class="text-5xl font-serif text-brand-sage"><span id="security-check-score"></span><span class="text-2xl">/12</span></div>
+                </div>
+                <div class="border-t border-white/15 pt-6">
+                    <p class="text-xs uppercase tracking-widest text-brand-bg/60 font-bold mb-2">Recommended first action</p>
+                    <p id="security-check-priority" class="text-lg text-brand-bg"></p>
+                </div>
+                <a href="contact.html" class="inline-flex items-center gap-2 mt-8 text-sm font-semibold text-brand-sage hover:text-white transition-colors">
+                    Discuss your security posture <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="py-32 px-6 bg-[#F2F0EB] border-y border-brand-stone" id="audience">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-center">
 
@@ -909,109 +1232,123 @@
         </div>
     </section>
 
-    <footer class="bg-brand-bg pt-24 pb-12 px-6 border-t border-brand-stone" id="contact">
+    <footer class="bg-brand-forest pt-24 pb-12 px-6" id="contact">
         <div class="max-w-7xl mx-auto">
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
                 <div class="space-y-6">
-                    <img src="logo.png" alt="MorseByte" class="h-8 object-contain mix-blend-multiply opacity-90">
-                    <p class="text-sm text-brand-forest/70 font-sans leading-relaxed pr-4">
+                    <img src="logo.png" alt="MorseByte" class="h-8 object-contain mix-blend-screen opacity-90 brightness-200">
+                    <p class="text-sm text-brand-bg/70 font-sans leading-relaxed pr-4">
                         We architect, deploy, and secure enterprise-grade digital ecosystems. Cultivate your legacy.
                     </p>
-                    <div class="flex space-x-4 pt-2">
-                        <a href="#"
-                            class="w-10 h-10 rounded-full border border-brand-stone flex items-center justify-center text-brand-forest/60 hover:text-white hover:bg-brand-sage hover:border-brand-sage transition-all duration-300 group"
-                            aria-label="LinkedIn">
-                            <i data-lucide="linkedin" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 rounded-full border border-brand-stone flex items-center justify-center text-brand-forest/60 hover:text-white hover:bg-brand-sage hover:border-brand-sage transition-all duration-300 group"
-                            aria-label="Twitter">
-                            <i data-lucide="twitter" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
-                        </a>
+                    <div class="flex flex-wrap gap-3 pt-2" aria-label="Social media">
+                        <a href="https://www.tiktok.com/@morsebyte_" target="_blank" rel="noopener noreferrer"
+                            class="text-sm font-semibold text-brand-bg/70 hover:text-brand-sage transition-colors"
+                            aria-label="MorseByte on TikTok">TikTok</a>
+                        <a href="https://www.instagram.com/morsebyte/" target="_blank" rel="noopener noreferrer"
+                            class="text-sm font-semibold text-brand-bg/70 hover:text-brand-sage transition-colors"
+                            aria-label="MorseByte on Instagram">Instagram</a>
                     </div>
                 </div>
 
                 <div>
-                    <h4 class="font-serif text-lg text-brand-forest mb-6">Navigation</h4>
+                    <h4 class="font-serif text-lg text-brand-bg mb-6">Navigation</h4>
                     <ul class="space-y-4">
                         <li><a href="index.html"
-                                class="flex items-center space-x-2 text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300 group"><span
-                                    class="w-1.5 h-1.5 rounded-full bg-brand-stone group-hover:bg-brand-sage transition-colors"></span><span>Home</span></a>
+                                class="flex items-center space-x-2 text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300 group"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-brand-sage transition-colors"></span><span>Home</span></a>
                         </li>
                         <li><a href="about.html"
-                                class="flex items-center space-x-2 text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300 group"><span
-                                    class="w-1.5 h-1.5 rounded-full bg-brand-stone group-hover:bg-brand-sage transition-colors"></span><span>About Us</span></a></li>
+                                class="flex items-center space-x-2 text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300 group"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-brand-sage transition-colors"></span><span>About Us</span></a></li>
                         <li><a href="index.html#services"
-                                class="flex items-center space-x-2 text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300 group"><span
-                                    class="w-1.5 h-1.5 rounded-full bg-brand-stone group-hover:bg-brand-sage transition-colors"></span><span>Expertise</span></a>
+                                class="flex items-center space-x-2 text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300 group"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-brand-sage transition-colors"></span><span>Expertise</span></a>
                         </li>
                         <li><a href="index.html#vision"
-                                class="flex items-center space-x-2 text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300 group"><span
-                                    class="w-1.5 h-1.5 rounded-full bg-brand-stone group-hover:bg-brand-sage transition-colors"></span><span>Vision</span></a>
+                                class="flex items-center space-x-2 text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300 group"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-brand-sage transition-colors"></span><span>Vision</span></a>
                         </li>
+                        <li><a href="blog.html"
+                                class="flex items-center space-x-2 text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300 group"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-brand-sage transition-colors"></span><span>Insights</span></a>
+                        </li>
+                        <li><a href="ai-learning.html"
+                                class="flex items-center space-x-2 text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300 group"><span
+                                    class="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-brand-sage transition-colors"></span><span>AI Learning</span></a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-serif text-lg text-brand-forest mb-6">Legal Framework</h4>
+                    <h4 class="font-serif text-lg text-brand-bg mb-6">Legal Framework</h4>
                     <ul class="space-y-4">
                         <li><a href="privacy.html"
-                                class="text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300">Privacy Policy</a></li>
+                                class="text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300">Privacy Policy</a></li>
                         <li><a href="terms.html"
-                                class="text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300">Terms of Service</a></li>
+                                class="text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300">Terms of Service</a></li>
                         <li><a href="ethics.html"
-                                class="text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300">Ethics & Assurance</a></li>
+                                class="text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300">Ethics & Assurance</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-serif text-lg text-brand-forest mb-6">Direct Line</h4>
+                    <h4 class="font-serif text-lg text-brand-bg mb-6">Direct Line</h4>
                     <ul class="space-y-5">
                         <li>
                             <a href="mailto:info@morsebyte.co.za"
-                                class="flex items-start space-x-4 text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300 group">
+                                class="flex items-start space-x-4 text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300 group">
                                 <i data-lucide="mail"
-                                    class="w-5 h-5 mt-0.5 text-brand-stone group-hover:text-brand-sage transition-colors"></i>
+                                    class="w-5 h-5 mt-0.5 text-white/40 group-hover:text-brand-sage transition-colors"></i>
                                 <span>info@morsebyte.co.za</span>
                             </a>
                         </li>
                         <li>
                             <a href="tel:+27619885671"
-                                class="flex items-start space-x-4 text-sm font-sans text-brand-forest/70 hover:text-brand-sage transition-colors duration-300 group">
+                                class="flex items-start space-x-4 text-sm font-sans text-brand-bg/70 hover:text-brand-sage transition-colors duration-300 group">
                                 <i data-lucide="phone"
-                                    class="w-5 h-5 mt-0.5 text-brand-stone group-hover:text-brand-sage transition-colors"></i>
+                                    class="w-5 h-5 mt-0.5 text-white/40 group-hover:text-brand-sage transition-colors"></i>
                                 <span>+27 619885671</span>
                             </a>
+                        </li>
+                        <li class="flex items-start space-x-4 text-sm font-sans text-brand-bg/70">
+                            <i data-lucide="map-pin" class="w-5 h-5 mt-0.5 text-white/40"></i>
+                            <span>7th Floor, Radisson Blu Hotel<br>Sandton Isle, 126 Rivonia Road, Sandton, 2196</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-brand-stone/40 pt-12">
-                <p class="text-xs text-brand-forest/50 font-sans text-center">© 2024 MorseByte. All rights reserved.</p>
+            <div class="border-t border-brand-stone/20 pt-8 flex flex-col md:flex-row justify-between items-center text-xs tracking-widest uppercase text-brand-bg/50 font-sans">
+                <p>&copy; 2026 MorseByte. Architecting the future.</p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="contact.html"
+                        class="hover:text-brand-sage transition-colors font-bold text-brand-sage tracking-widest text-[10px] uppercase">Initiate
+                        Dialogue <i data-lucide="arrow-right" class="w-3 h-3 inline pb-0.5"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script>
         const initializeLucideIcons = () => {
-            lucide.createIcons();
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
         }
 
         window.addEventListener('load', () => {
             initializeLucideIcons();
 
             const scrollBtn = document.getElementById('scroll-up-btn');
-            const whatsappBtn = document.getElementById('whatsapp-btn');
+            const navbar = document.getElementById('navbar');
 
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    scrollBtn.classList.add('show');
-                } else {
-                    scrollBtn.classList.remove('show');
-                }
-            });
+            const updateScrollState = () => {
+                const hasScrolled = window.scrollY > 24;
+                scrollBtn.classList.toggle('show', window.scrollY > 300);
+                navbar.classList.toggle('is-scrolled', hasScrolled);
+            };
+            window.addEventListener('scroll', updateScrollState, { passive: true });
+            updateScrollState();
 
             scrollBtn.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1024,10 +1361,15 @@
             const mobileLinks = document.querySelectorAll('.mobile-link');
 
             mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('opacity-0');
-                mobileMenu.classList.toggle('pointer-events-none');
+                const isOpen = mobileMenu.classList.contains('opacity-100');
+                mobileMenu.classList.toggle('opacity-0', isOpen);
+                mobileMenu.classList.toggle('pointer-events-none', isOpen);
+                mobileMenu.classList.toggle('opacity-100', !isOpen);
+                mobileMenu.classList.toggle('pointer-events-auto', !isOpen);
                 menuIcon.classList.toggle('hidden');
                 closeIcon.classList.toggle('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
+                document.body.style.overflow = isOpen ? '' : 'hidden';
             });
 
             mobileLinks.forEach(link => {
@@ -1036,20 +1378,146 @@
                     mobileMenu.classList.add('pointer-events-none');
                     menuIcon.classList.remove('hidden');
                     closeIcon.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
                 });
             });
 
+            const serviceMatcherOptions = document.querySelectorAll('.service-matcher-option');
+            const serviceMatcherResult = document.getElementById('service-matcher-result');
+            const serviceMatcherTitle = document.getElementById('service-matcher-title');
+            const serviceMatcherDescription = document.getElementById('service-matcher-description');
+            const serviceMatcherContact = document.getElementById('service-matcher-contact');
+            const serviceRecommendations = {
+                automation: ['AI Opportunity Sprint', 'Map your highest-friction workflows, identify safe automation opportunities, and leave with a prioritized 30-day pilot plan.', 'AI Opportunity Sprint enquiry'],
+                security: ['Security Foundation Review', 'Review access, backups, updates, and incident readiness to produce a practical risk report with prioritized actions.', 'Security Foundation Review enquiry'],
+                cloud: ['Cloud & Delivery Roadmap', 'Assess reliability, deployment flow, scalability, and cost so your team can improve infrastructure with confidence.', 'Cloud and Delivery Roadmap enquiry'],
+                software: ['Product Engineering Discovery', 'Clarify the product outcome, technical constraints, and delivery path for a new platform, application, or modernization effort.', 'Product Engineering Discovery enquiry'],
+                direction: ['Technical Direction Session', 'Bring your biggest technical constraint. Weâ€™ll help frame the decision, surface risk, and define the next sensible step.', 'Technical Direction Session enquiry']
+            };
+            serviceMatcherOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const recommendation = serviceRecommendations[option.dataset.service];
+                    serviceMatcherTitle.textContent = recommendation[0];
+                    serviceMatcherDescription.textContent = recommendation[1];
+                    serviceMatcherContact.href = `contact.html?subject=${encodeURIComponent(recommendation[2])}`;
+                    serviceMatcherResult.classList.remove('hidden');
+                    serviceMatcherResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    initializeLucideIcons();
+                });
+            });
+
+            const healthCheckForm = document.getElementById('health-check-form');
+                const healthCheckResult = document.getElementById('health-check-result');
+                const healthCheckError = document.getElementById('health-check-error');
+                if (healthCheckForm) {
+                    healthCheckForm.addEventListener('submit', (event) => {
+                        event.preventDefault();
+                        if (!healthCheckForm.checkValidity()) {
+                            healthCheckError.classList.remove('hidden');
+                            return;
+                        }
+                        healthCheckError.classList.add('hidden');
+                        const score = [...new FormData(healthCheckForm).values()]
+                            .reduce((total, value) => total + Number(value), 0);
+                        const title = document.getElementById('health-check-title');
+                        const summary = document.getElementById('health-check-summary');
+                        const priority = document.getElementById('health-check-priority');
+                        if (score <= 4) {
+                            title.textContent = 'Build your foundation.';
+                            summary.textContent = 'Your answers show meaningful operational risk or manual friction. A focused baseline can create quick wins and a safer path to scale.';
+                            priority.textContent = 'Start with a technology and security baseline, then turn the highest-friction workflow into an automation pilot.';
+                        } else if (score <= 8) {
+                            title.textContent = 'You are ready to strengthen your system.';
+                            summary.textContent = 'You have useful foundations, but a few disconnected areas may limit growth. Targeted integration and automation can unlock capacity.';
+                            priority.textContent = 'Map your critical workflows and connect the systems that create the most duplicated work or visibility gaps.';
+                        } else {
+                            title.textContent = 'Scale with confidence.';
+                            summary.textContent = 'Your technology foundations are strong. The next opportunity is to optimize, govern, and extend them without adding unnecessary complexity.';
+                            priority.textContent = 'Prioritize measurable AI automation and continuous security improvements around your most valuable business processes.';
+                        }
+                        document.getElementById('health-check-score').textContent = score;
+                        const resultTitle = title.textContent;
+                        const resultPriority = priority.textContent;
+                        const resultMessage = `Hello MorseByte, I completed the Technology Health Check and scored ${score}/12 (${resultTitle}). Recommended first priority: ${resultPriority}`;
+                        document.getElementById('health-check-whatsapp').href =
+                            `https://wa.me/27619885671?text=${encodeURIComponent(resultMessage)}`;
+                        document.getElementById('health-check-email-btn').onclick = () => {
+                            const email = document.getElementById('health-check-email').value.trim();
+                            const status = document.getElementById('health-check-lead-status');
+                            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                                status.textContent = 'Enter a valid email address before emailing your result.';
+                                status.classList.remove('hidden');
+                                return;
+                            }
+                            const subject = encodeURIComponent('My MorseByte Technology Health Check result');
+                            const body = encodeURIComponent(
+                                `My email: ${email}\n\nScore: ${score}/12\nAssessment: ${resultTitle}\n\nRecommended first priority: ${resultPriority}`
+                            );
+                            status.textContent = 'Opening your email app with the result prepared.';
+                            status.classList.remove('hidden');
+                            window.location.href = `mailto:info@morsebyte.co.za?subject=${subject}&body=${body}`;
+                        };
+                        document.getElementById('health-check-follow-up').classList.remove('hidden');
+                        healthCheckResult.classList.remove('hidden');
+                        healthCheckResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        initializeLucideIcons();
+                    });
+                }
+
+                const securityCheckForm = document.getElementById('security-check-form');
+                const securityCheckResult = document.getElementById('security-check-result');
+                const securityCheckError = document.getElementById('security-check-error');
+                if (securityCheckForm) {
+                    securityCheckForm.addEventListener('submit', (event) => {
+                        event.preventDefault();
+                        if (!securityCheckForm.checkValidity()) {
+                            securityCheckError.classList.remove('hidden');
+                            return;
+                        }
+                        securityCheckError.classList.add('hidden');
+                        const score = [...new FormData(securityCheckForm).values()]
+                            .reduce((total, value) => total + Number(value), 0);
+                        const title = document.getElementById('security-check-title');
+                        const summary = document.getElementById('security-check-summary');
+                        const priority = document.getElementById('security-check-priority');
+                        if (score <= 4) {
+                            title.textContent = 'High-priority exposure.';
+                            summary.textContent = 'Several foundational controls may be missing or inconsistent. A focused baseline can reduce avoidable risk quickly.';
+                            priority.textContent = 'Enable multi-factor authentication, verify recoverable backups, and document who to call during an incident.';
+                        } else if (score <= 8) {
+                            title.textContent = 'Important gaps to close.';
+                            summary.textContent = 'You have some useful controls, but consistency and testing may be limiting your resilience.';
+                            priority.textContent = 'Review privileged access and test your backup and incident response processes with your team.';
+                        } else {
+                            title.textContent = 'Strong foundations.';
+                            summary.textContent = 'Your answers indicate a healthy starting point. Keep controls tested, monitored, and aligned with business change.';
+                            priority.textContent = 'Schedule recurring access reviews and incident simulations to maintain readiness as you scale.';
+                        }
+                        document.getElementById('security-check-score').textContent = score;
+                        securityCheckResult.classList.remove('hidden');
+                        securityCheckResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        initializeLucideIcons();
+                    });
+                }
             const preloader = document.getElementById('preloader');
             const loaderLogo = document.querySelector('.loader-logo');
             const loaderLineContainer = document.querySelector('.loader-line-container');
             const loaderLine = document.querySelector('.loader-line');
 
-            let tl = gsap.timeline();
+            const hidePreloader = () => {
+                if (!preloader || preloader.classList.contains('is-hidden')) {
+                    return;
+                }
+                preloader.classList.add('is-hidden');
+                window.setTimeout(() => preloader.remove(), 600);
+            };
 
-            tl.to(loaderLogo, { opacity: 1, duration: 0.3 });
-            tl.to(loaderLineContainer, { opacity: 1, duration: 0.3 }, 0);
-            tl.to(loaderLine, { width: '100%', duration: 2, ease: 'power2.inOut' });
-            tl.to(preloader, { opacity: 0, duration: 0.5, delay: 0.2, pointerEvents: 'none' });
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                hidePreloader();
+            } else {
+                window.setTimeout(hidePreloader, 2400);
+            }
 
             gsap.registerPlugin(ScrollTrigger);
 
