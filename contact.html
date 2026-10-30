@@ -186,7 +186,16 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu"
         class="fixed inset-0 bg-brand-forest z-50 flex flex-col justify-between px-8 pt-28 pb-12 opacity-0 pointer-events-none transition-opacity duration-700">
+        <button id="mobile-menu-close" type="button"
+            class="absolute top-6 right-6 flex items-center justify-center w-10 h-10 rounded-full border border-white/20 text-white hover:bg-white hover:text-brand-forest transition-colors duration-300 focus-ring"
+            aria-label="Close mobile menu">
+            <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
         <nav class="flex flex-col space-y-2">
+            <a href="index.html" class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
+                <span class="text-3xl font-serif text-white group-hover:text-brand-sage transition-colors duration-300">Home</span>
+                <i data-lucide="house" class="w-5 h-5 text-white/30 group-hover:text-brand-sage transition-colors"></i>
+            </a>
             <a href="index.html#vision"
                 class="mobile-link group flex items-center justify-between py-5 border-b border-white/10">
                 <span
@@ -458,6 +467,7 @@
         // Mobile Menu Logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
         const menuIcon = document.querySelector('.menu-icon');
         const closeIcon = document.querySelector('.close-icon');
 
@@ -482,6 +492,9 @@
 
         if (mobileMenuBtn) {
             mobileMenuBtn.addEventListener('click', toggleMenu);
+        }
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', toggleMenu);
         }
 
         // Subtle Scroll effect for Navbar
